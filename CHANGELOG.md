@@ -1,5 +1,17 @@
 # VaultCove Changelog
 
+## 0.5.2 R1
+
+- Fixed master-password retry handling so a failed attempt cannot race with or visually override the next correct attempt.
+- Serialized unlock and Sensitive Access verification in the background service worker and added UI busy guards to reject duplicate concurrent submissions.
+- Wrong-password failures now report `Incorrect master password.` instead of conflating a normal typo with vault damage.
+- Added persistent inline errors on unlock and Sensitive Access prompts; failed entries are cleared and refocused for a clean retry.
+- A failed Sensitive Access verification clears any stale Sensitive Access grant without changing the encrypted vault or unlocked vault-key session.
+- Added explicit phishing-safe Google account-family matching for `accounts.google.com`, `mail.google.com`, `myaccount.google.com`, `gmail.com`, and `www.gmail.com`.
+- Gmail now surfaces all matching saved/imported Google accounts even when LastPass stored them under `accounts.google.com` or another explicitly trusted Google account host.
+- Google family matching is an exact reviewed-host allowlist; root `google.com`, arbitrary subdomains, suffix lookalikes, and attacker-controlled domains do not inherit access.
+- Added regression tests for wrong-then-correct master-password recovery and Gmail multi-account matching.
+
 ## 0.5.1 R1
 
 - Added encrypted new-login/signup capture with user-confirmed Save/Ignore review; no silent credential registration.
