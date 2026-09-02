@@ -2,7 +2,7 @@
     "product":  "VaultCove",
     "channel":  "dev",
     "version":  "0.5.2",
-    "published":  "2026-09-02T23:47:27Z",
+    "published":  "2026-09-02T23:47:58Z",
     "critical":  false,
     "sha256":  "41bde24357b0dfffd91eb99ce1dd05a1ec4702aa23d734dc03cd03081d791376",
     "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.5.2/VaultCove-0.5.2-R1-UPDATE-PUBLISH.zip",
@@ -10,5 +10,5 @@
     "summary":  "New-login capture, password-change review, per-site handler permissions, Secure Login field clearing, VCShare v1 and repaired Store build separation.",
     "schemaVersion":  3,
     "signatureAlgorithm":  "ECDSA-P256-SHA256",
-    "signature":  "hauVieAW7XXUqke-Z_zousJU0YiGUifmfEthwI50nHPhDb_NPEMEEsnYOIGyXYgJHNzwpsESZSumHQk0xnJlkQ"
+    "signature":  "xgTT2NTO2k6MTZO3ccyviTw040rlq5A-2y3er_y_NZQ18IH5z0a8eDAAweKdrd0jaJcgTHDPVJnBFGI5iUgqZw"
 }
