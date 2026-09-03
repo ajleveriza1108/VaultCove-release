@@ -1,0 +1,17 @@
+{
+    "product":  "VaultCove",
+    "version":  "0.7.23",
+    "revision":  "R1",
+    "tag":  "v0.7.23-r1",
+    "publicKeySha256":  "de232e9a6f243d36a73d1525be597dfc776bd0bcd9169aa9800cdac3db241401",
+    "artifacts":  [
+                      {
+                          "name":  "VaultCove-0.7.23-R1-UPDATE-PUBLISH.zip",
+                          "sha256":  "347e0d99f8e3c20dcbdc6fae5c83885694ec1959ad1c6a2f6734b07e2591ffde"
+                      },
+                      {
+                          "name":  "VaultCove-0.7.23-R1-DEV.zip",
+                          "sha256":  "c9eaf10d53c3e4cc933fe3e456d710051158e63b4ebe88dcd940c3bc4431a69e"
+                      }
+                  ]
+}
