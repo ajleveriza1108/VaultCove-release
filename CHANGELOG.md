@@ -1,12 +1,20 @@
 # VaultCove Changelog
 
-## 0.7.7 R1
-- Added real encrypted Vault folders with create, rename, delete-without-deleting-items, filtering, item assignment, and migration folder preservation.
-- Added a universal local migration detector for 1Password, Bitwarden, LastPass, Dashlane, Keeper, NordPass, Proton Pass, RoboForm, Enpass, Zoho Vault, major browser password managers, and generic CSV/JSON exports. Added a broad manager-name recognition registry based on current migration ecosystems so many additional exports can be identified by filename plus schema and routed through safe generic CSV/JSON mapping when compatible.
-- Added 1Password 1PUX ZIP parsing and generic ZIP credential-export discovery without uploading source files. Native KeePass/KeePassXC .kdbx plus manager-specific XML/FSK/HTML/legacy 1PIF/SV containers are recognized but deliberately not guessed at; users receive a manager-aware safer export path.
-- Added Google Authenticator-gated .vckey-to-TXT conversion. Plaintext conversion requires fresh Sensitive Access, an enabled VaultCove TOTP/recovery-code factor, and the original .vckey password.
-- Added a mandatory plaintext warning explaining that TXT output is readable, contains public sharing identity material only, and must not replace the authenticated encrypted .vckey for trust decisions.
-- Preserved the 0.7.6 palette-only theme switching, Compact-interface isolation, dashboard icon cleanup, and existing security/runtime behavior.
+## 0.7.9 R1
+- Recovery release for a canonical project that is already on VaultCove 0.7.7. The publisher now explicitly accepts and fingerprint-verifies the clean 0.7.7 baseline instead of stopping before backup.
+- Carries forward the centered unlock/setup gate, live website-handler unlock acknowledgement, encrypted Vault folders with Vault Settings organization, and Google Authenticator-gated `.vckey` to TXT conversion intended for 0.7.8.
+- Supports verified 0.7.7, 0.7.8, and 0.7.9 states so the updater can recover from the rejected/superseded update path without destructive resets or force-pushes.
+- Creates a rollback backup before applying the clean 0.7.9 source and retains the exact two-file BAT + PS1 package contract.
+
+## 0.7.8 R1
+- Based the update on the accepted 0.7.6 source; 0.7.7 is not required.
+- Fixed the idle-lock layout regression: the locked/setup gate owns the full viewport and remains centered regardless of Compact mode, theme, responsive sidebar breakpoint, browser size, or display scaling.
+- Reworked the website-handler unlock handoff into an acknowledged live session refresh. Unlocking from a handler request broadcasts the new session state, refreshes the original page handler immediately, requires an acknowledgement, and only then closes the VaultCove unlock tab. No website refresh should be required.
+- Broadcast lock state to open HTTPS handlers for manual and idle auto-lock so handler badges/panels do not keep stale unlocked state.
+- Added encrypted Vault folders and **Vault Settings**. Users can create/rename/delete folders, select one or many saved logins, and move them into a folder or No Folder. Folder deletion preserves every credential.
+- Added Folder selection to the encrypted login/item editor and folder filtering to Vault views.
+- Added Google Authenticator-gated `.vckey` to TXT conversion. Conversion requires fresh Sensitive Access plus the existing separate `.vckey` password; there is no third TXT-conversion password. TXT output contains only public sharing identity material.
+- Preserved the accepted 0.7.6 appearance stability and compact Dashboard icon fixes.
 
 ## 0.7.6 R1
 - Fixed the appearance bootstrap regression that made the interface density change when a theme was selected. Saved theme and Compact interface state are now applied before the unlocked UI is shown.
