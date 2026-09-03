@@ -1,3 +1,15 @@
+# Changelog
+
+## 0.7.13 R1
+
+- Replaced the `.vckey` File System Access save-picker path with Chromium's browser-owned `downloads.download(..., saveAs:true)` flow to fix the Windows case where the pointer could hover but render invisibly inside Save As.
+- `.vckey` export now completes fresh Master Password/Sensitive Access and file-password protection before opening Save As; cancelled Save As writes nothing.
+- Added the narrowly-scoped `downloads` permission for explicit user-requested encrypted exports and documented the permission for Chrome Web Store review.
+- Kept restore/open-file behavior unchanged because the normal Open dialog already renders the pointer correctly.
+- Added premium-style live password setup guidance for every newly created security password: the UI shows minimum length, lowercase, capital, number, special-character, confirmation-match, and a live completion meter.
+- New Master Passwords and Recovery Passwords require 16+ characters; new `.vckey` and `.vcshare` package passwords require 14+ characters. Existing encrypted files remain importable with their original passwords.
+- Creation/continue buttons stay disabled until the displayed requirements and confirmation match are satisfied, while import/unlock forms do not retroactively reject older passwords.
+
 # VaultCove Changelog
 
 ## 0.7.12 R1
