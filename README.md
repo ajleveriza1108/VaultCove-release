@@ -4,7 +4,7 @@ Public developer-release metadata and signed packages for VaultCove.
 
 - Source project: ajleveriza1108/VaultCove
 - Update metadata: latest.json
-- Current developer package: releases/0.7.14/VaultCove-0.7.14-R1-UPDATE-PUBLISH.zip
+- Current developer package: releases/0.7.16/VaultCove-0.7.16-R1-UPDATE-PUBLISH.zip
 - Package/update metadata are signed with the VaultCove release-signing key.
 - The signing private key, master passwords, vault keys, licensing secrets, and user vault data are never committed here.
 

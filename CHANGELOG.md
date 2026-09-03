@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.7.16 R1
+
+- Fixed the Chrome Web Store package preflight that incorrectly expected `favicon` in `optional_permissions` even though VaultCove 0.7.15 intentionally makes Chrome-local website thumbnails a default premium feature.
+- The Developer and Store packages now keep Chrome's local `favicon` permission as a required local API permission; the Store build still converts HTTPS site access to `optional_host_permissions` and removes Developer-only static content-script registration.
+- Added an explicit Store-manifest regression gate that rejects both a missing required `favicon` permission and an accidental duplicate optional `favicon` permission.
+- No vault-data migration or credential re-encryption is required; this release advances the already-applied 0.7.15 source after the publisher stopped safely in Phase 5.
+
+## 0.7.15 R1
+
+- Removed the saved-password **Fill** action from both the website handler and extension popup. Saved passwords can now be used on websites only through **Strict Secure Login**.
+- Strict Secure Login requires a verified top-level HTTPS destination, blocks unapproved ports and unrelated subdomains, injects the password only for immediate submission, avoids normal password `input`/`change` events, and clears the field if safe submission cannot be found or shortly after submission.
+- Expanded premium password creation to eight live security checks: minimum length, lowercase, capital, number, special character, no three repeated characters, no obvious/common word or sequence, and at least eight unique characters, plus matching confirmation. Added Show/Hide controls and disabled creation until every requirement passes.
+- Removed the `CHANGE MASTER PASSWORD` typed phrase. Master-password changes still require the current Master Password, a valid strong replacement, confirmation, and Authenticator/recovery verification when enabled.
+- Fixed Backup & Restore navigation so the sidebar route awaits its async view render and surfaces a visible Retry card if rendering fails instead of appearing to do nothing.
+- Enabled Chrome-local website thumbnails by default for a premium Vault-card appearance. No third-party favicon service is contacted.
+- Removed custom button tooltips and native button title attributes; icon-only controls retain `aria-label` accessibility text.
+- New vaults created from the extension popup now continue directly into the one-time Security Essentials wizard instead of bypassing critical first-run setup.
+- Added regression tests for handler/popup Fill removal, exact HTTPS Secure Login origin validation, top-frame-only enforcement, premium password checks, Backup navigation, default thumbnails, master-change phrase removal, and tooltip removal.
+
 ## 0.7.14 R1
 
 - Added selective encrypted `.vcvault` backups. Login credentials are selected by default; users can opt into Folders, Cards, Bank accounts, Identities, Secure notes, TOTP codes, Trash, Favorites, and Other settings.
