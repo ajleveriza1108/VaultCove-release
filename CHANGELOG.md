@@ -1,5 +1,15 @@
 # VaultCove Changelog
 
+## 0.7.19 R1 — Local profile photo + locked capture inbox + launch defaults
+
+- Adds an optional local profile photo during first-run Security Essentials and in Settings. VaultCove resizes it on-device and stores it only in local extension storage; it is never uploaded or synced.
+- Adds a public-key-sealed locked capture inbox. After the capture identity is provisioned, submitted login/registration credentials can be encrypted while the vault is locked and reconciled into the encrypted vault on the next unlock.
+- Keeps use-only shared credentials out of the locked capture reconciliation path so shared secrets are not converted into owned captures.
+- Removes the user-editable Apps Script license-service URL. Licensing transport is build-managed and remains unconfigured until the Payhip/Apps Script setup; Payhip/API secrets remain server-side.
+- Keeps Grid as the default Vault card view.
+- Makes Login credentials a mandatory component of every encrypted `.vcvault` backup; optional components can still be selected independently.
+- Centers each Dashboard summary icon inside its own summary section.
+
 ## 0.7.18 R1 — Recovery verification + personalized final-stage Vault UI
 - Fixes Offline Recovery Kit creation/restoration so the current Master Password is verified inside the Recovery Kit dialog instead of chaining a separate Sensitive Access dialog with the Recovery Password dialog.
 - Recovery Password remains a separate 16+ character premium-strength password and cannot equal the current Master Password.
