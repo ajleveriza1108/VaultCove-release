@@ -1,5 +1,20 @@
 # VaultCove Changelog
 
+## 0.7.1 R2
+
+- Repaired the Store-preflight publisher so a Developer manifest that intentionally omits `optional_host_permissions` is handled safely under PowerShell StrictMode.
+- The Store transform now creates `optional_host_permissions` when the property is absent instead of attempting to assign a non-existent PSCustomObject property.
+- Added a publisher regression probe for absent optional manifest properties before any build or repository publication step.
+- No VaultCove runtime behavior or vault cryptography changed from the tested 0.7.1 R1 runtime repair.
+
+## 0.7.1 R1
+
+- Fixed the dashboard startup path so handler-permission status cannot leave VaultCove stuck at Loading. A visible startup error/retry gate now appears if initialization genuinely fails.
+- Developer Always-On Handler now uses a manifest-declared HTTPS content script instead of a dynamic script ID, eliminating the duplicate `vaultcove-inline-handler` registration race. Store builds continue to use optional dynamic website permission.
+- Removed redundant Google Apps Script and GitHub host entries from the Developer manifest because the required Developer HTTPS test permission already covers those origins.
+- Handler-initiated unlock now opens a dedicated VaultCove unlock tab, closes that tab automatically after successful verification, and notifies the original login page immediately so no page refresh is required.
+- Added regression checks for manifest permission redundancy, static Developer handler registration, no duplicate dynamic registration in Developer mode, handler unlock completion, and startup failure visibility.
+
 ## 0.7.0 R1
 
 - Added encrypted offline `.vcrecovery` Recovery Kits for restoring the VaultCove sharing identity and device recovery token without cloud storage. Recovery Passwords are separate from the master password and `.vckey` passwords.

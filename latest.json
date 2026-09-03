@@ -1,14 +1,14 @@
 {
     "product":  "VaultCove",
     "channel":  "dev",
-    "version":  "0.7.0",
-    "published":  "2026-09-03T02:34:14Z",
+    "version":  "0.7.1",
+    "published":  "2026-09-03T02:55:00Z",
     "critical":  false,
-    "sha256":  "6d4b70dc7b8ee8000e4e4bb2579e22396bfd4ed32345a2fbd0a056a9bbdbe226",
-    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.0/VaultCove-0.7.0-R1-UPDATE-PUBLISH.zip",
+    "sha256":  "f1866a63bf0a95ecea6ef12977ac50d59612dbb26225eeb86f3aed8e35b433df",
+    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.1/VaultCove-0.7.1-R2-UPDATE-PUBLISH.zip",
     "notesUrl":  "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
-    "summary":  "Offline Recovery Kit, exact-card Secure Login, six themes, compact UI, Standard 7-device and Admin 20-device licensing, retained-device recovery, and Android-ready recovery formats.",
+    "summary":  "Store-preflight publisher repair for absent optional manifest properties; runtime remains VaultCove 0.7.1.",
     "schemaVersion":  3,
     "signatureAlgorithm":  "ECDSA-P256-SHA256",
-    "signature":  "jJ0WBhA7BVZCUsxNV3worCtQLIwH42gVfmsKPCiPbeps9rc7jofgcZ-CXa2ll9ZBueQuuMeHz8YSsQng330OYg"
+    "signature":  "l2Vg9vgqd2_iPY3Z1drqFCj98D7go1CkinEv0JSVNiG0ic02SGjOn9Sibvv-XTm-TgE8YpQVctWKRqcPD9W5BQ"
 }
