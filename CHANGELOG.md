@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.17 R1
+
+- Fixed the Backup & Restore render crash `attr is not defined`. The selective-backup option renderer and per-site handler exception rows referenced a helper that existed only inside the item-editor function, so the async Backup page could fail before creating its controls.
+- Added one global `escapeAttr()` helper beside `escapeHtml()` and routed backup component keys, handler host attributes, and item-editor input values through the same defined escaping path.
+- Added a regression gate that rejects the old undefined `${attr(key)}` / `${attr(host)}` markup so Backup & Restore cannot silently regress to a dead route again.
+- Preserved 0.7.16 security behavior, Strict Secure Login, premium password setup, selective encrypted backups, default local website thumbnails, sealed Trash, sharing, recovery, and the Store favicon permission repair.
+
 ## 0.7.16 R1
 
 - Fixed the Chrome Web Store package preflight that incorrectly expected `favicon` in `optional_permissions` even though VaultCove 0.7.15 intentionally makes Chrome-local website thumbnails a default premium feature.
