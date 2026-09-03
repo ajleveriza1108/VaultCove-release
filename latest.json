@@ -1,14 +1,14 @@
 {
     "product":  "VaultCove",
     "channel":  "dev",
-    "version":  "0.6.0",
-    "published":  "2026-09-03T01:04:26Z",
+    "version":  "0.7.0",
+    "published":  "2026-09-03T02:24:37Z",
     "critical":  false,
-    "sha256":  "2822dfd673fa70c2a053fe59a6f216cc1426ce3e6f6a2369dfed103cb57d89c1",
-    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.6.0/VaultCove-0.6.0-R1-UPDATE-PUBLISH.zip",
+    "sha256":  "6d4b70dc7b8ee8000e4e4bb2579e22396bfd4ed32345a2fbd0a056a9bbdbe226",
+    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.0/VaultCove-0.7.0-R1-UPDATE-PUBLISH.zip",
     "notesUrl":  "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
-    "summary":  "Always-On secure handler, inline password generator, visual Vault cards, authenticator confirmation, verified master rotation and VCShare v2 bundles.",
+    "summary":  "Offline Recovery Kit, exact-card Secure Login, six themes, compact UI, Standard 7-device and Admin 20-device licensing, retained-device recovery, and Android-ready recovery formats.",
     "schemaVersion":  3,
     "signatureAlgorithm":  "ECDSA-P256-SHA256",
-    "signature":  "vK8zSRY22lTmNR9PkHlQa1BrLaEeyTgE5R7mJ3v0trRaf_p1-hDUm67od50QlEErZNI34FPUMP0c5h-HpRM2NQ"
+    "signature":  "l83QeXZTLcVpC2Y4uSbsHj1KjiKYH8bh_FCVtRGr4ul2QkFjECAgWy2l9fLwNCW5oTupYcTo4lc8iqsnSj_44g"
 }

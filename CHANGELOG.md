@@ -1,5 +1,32 @@
 # VaultCove Changelog
 
+## 0.7.0 R1
+
+- Added encrypted offline `.vcrecovery` Recovery Kits for restoring the VaultCove sharing identity and device recovery token without cloud storage. Recovery Passwords are separate from the master password and `.vckey` passwords.
+- Added recovery-token based device re-identification so a licensed installation can reclaim the same device record after a reset when the user restores the Recovery Kit. No hardware fingerprint is used.
+- Clicking a login in Grid or List view now opens its saved HTTPS website and performs an explicit one-time Secure Login for that selected credential.
+- Added six built-in themes: VaultCove Midnight, AMOLED Black, Graphite, Ocean, Warm Ivory, and Light Gray.
+- Standardized compact responsive spacing and removed decorative Unicode control glyphs from the main dashboard navigation and vault browsing controls.
+- Expanded Apps Script licensing with Standard 7-device and Admin 20-device serial classes plus Release, Revoke, Retain, and Restore device actions. Testing builds remain Full Access with no trial enforcement.
+- Retained-device recovery can reclaim the same server device record after verified email activation. A restored Recovery Kit matches by its random device-recovery token; if that local token was lost, the verified owner can select a retained record instead of consuming a duplicate slot.
+- Added Apps Script sheet-header migration so new licensing columns can be appended safely without depending on a fixed historical column order.
+- Added Android-ready recovery/device protocol documentation so future VaultCove Android can exchange the same `.vckey`, `.vcshare`, `.vcvault`, and `.vcrecovery` formats.
+
+
+## 0.6.1 R1
+
+- Fixed Chrome `Duplicate script ID 'vaultcove-inline-handler'` by serializing browser-integration changes and atomically updating an existing dynamic content-script registration instead of racing unregister/register calls.
+- Developer build now keeps the HTTPS login handler always-on so supported fields receive VaultCove automatically without first clicking the toolbar icon. The Store preflight converts this broad developer permission back to optional website access.
+- Added masked-handler account count plus a local search box for sites with many matching credentials. Search runs inside the trusted extension background and returns only masked summaries; passwords never enter the page menu.
+- Sharing identity Share ID/fingerprint are masked by default and require Sensitive Access to reveal temporarily.
+- Replaced plaintext public `.vckey` export/import with password-encrypted `.vckey` v2 using PBKDF2-HMAC-SHA-256 (600,000 iterations) and AES-256-GCM. The `.vckey` password is separate from the VaultCove master password.
+- Importing another `.vckey` now requires Sensitive Access plus the separate `.vckey` password before fingerprint confirmation/trust. Private sharing keys remain inside the encrypted vault and are never exported.
+- Preserved VCShare v2 multi-account selection with visual website cards and local visited-site favicon rendering.
+- Added `License & Devices` UI and Apps Script reference backend for email-bound serial activation, email OTP verification, RSA-signed license leases, seven active device slots, Release/Revoke/Restore controls and last-seen device metadata.
+- Licensing uses a random VaultCove installation ID and user device label; it never sends vault contents, saved websites, usernames, passwords, TOTP secrets, cards, bank records, secure notes, MAC addresses, hardware serials, IMEI or browser history.
+- Added a platform-neutral licensing/share design so a future VaultCove Android app can use the same `.vckey`, `.vcshare`, `.vcvault` and license-device protocol.
+- Added regression tests for the duplicate-handler race, handler search privacy, encrypted `.vckey` wrong-password rejection, licensing privacy boundaries and seven-device Apps Script controls.
+
 ## 0.6.0 R1
 
 - Added a one-time optional **Always-On Handler** HTTPS permission. After the user approves it, a persistent dynamic content script makes VaultCove appear automatically on supported login/password fields without first clicking the extension icon.
