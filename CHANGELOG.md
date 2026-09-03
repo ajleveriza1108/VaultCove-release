@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.7.14 R1
+
+- Added selective encrypted `.vcvault` backups. Login credentials are selected by default; users can opt into Folders, Cards, Bank accounts, Identities, Secure notes, TOTP codes, Trash, Favorites, and Other settings.
+- New component restores replace only the selected components contained in the backup and preserve unrelated categories already in the destination vault. Legacy full `.vcvault` backups remain compatible and retain full-vault restore semantics.
+- Made Folders, Favorites, and TOTP secrets independent backup overlays so a Login-only backup does not silently include them.
+- Added a portable-settings allowlist that excludes device/license identity, private signing data, and platform-specific state.
+- Added safe Trash portability: selected Trash records are opened only inside the authorized encrypted-backup operation and are re-sealed under the destination vault key during restore; expired Trash remains deleted.
+- Excluded recipient-bound Use Only shared credentials from portable component backups so delegated login access cannot be promoted into an owned portable credential.
+- Added `Login only`, `Select all`, and `Clear` backup presets plus selection count and dependency guidance in Backup & Restore.
+- Rebuilt Settings as independent responsive stacked columns to remove the large blank spaces caused by shared CSS grid rows when one card, especially Change Master Password, is much taller than its neighbors.
+- Added regression coverage for component selection, partial restore preservation, Trash re-sealing, settings allowlisting, Use Only exclusions, and gap-free Settings layout.
+
 ## 0.7.13 R1
 
 - Replaced the `.vckey` File System Access save-picker path with Chromium's browser-owned `downloads.download(..., saveAs:true)` flow to fix the Windows case where the pointer could hover but render invisibly inside Save As.
