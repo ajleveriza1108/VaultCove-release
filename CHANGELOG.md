@@ -1,5 +1,15 @@
 # VaultCove Changelog
 
+## 0.7.10 R1
+- Added a search box to **Vault Settings > Put logins in a folder**. Search matches login name/site, username, displayed account metadata, and current folder name; passwords are never included in organizer search.
+- Reduced the visual width of **Open and Secure Login** on Vault cards and added a dedicated Trash icon to Grid and List views.
+- Moving an item to Trash now requires an explicit confirmation explaining the lock and 30-day retention period.
+- Replaced plaintext soft-delete records with **Sealed Trash**. A fresh random per-item AES-256-GCM key encrypts the original item; that key is itself wrapped by the active vault key in a separate authenticated envelope. The normal decrypted vault model keeps only a minimal tombstone and cannot expose username, password, URL, notes, TOTP secret, card/bank fields, or other original item fields while the item is in Trash.
+- Trash items cannot be opened, edited, filled, copied, shared, or viewed. The only normal recovery path is **Restore**, which decrypts the sealed payload back into the active vault.
+- Trash items are automatically purged after 30 days on the next unlock/load/save after their deadline. Existing pre-0.7.10 plaintext Trash records are automatically sealed on first load unless already past the 30-day deadline.
+- Manual **Delete now** remains available in Trash behind Sensitive Access and a second irreversible-delete confirmation.
+- Added cryptographic round-trip, plaintext-leak, legacy-hardening, 30-day expiry, UI-search, and Trash-action regression gates.
+
 ## 0.7.9 R1
 - Recovery release for a canonical project that is already on VaultCove 0.7.7. The publisher now explicitly accepts and fingerprint-verifies the clean 0.7.7 baseline instead of stopping before backup.
 - Carries forward the centered unlock/setup gate, live website-handler unlock acknowledgement, encrypted Vault folders with Vault Settings organization, and Google Authenticator-gated `.vckey` to TXT conversion intended for 0.7.8.
