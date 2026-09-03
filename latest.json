@@ -1,14 +1,14 @@
 {
     "product":  "VaultCove",
     "channel":  "dev",
-    "version":  "0.7.10",
-    "published":  "2026-09-03T07:57:21Z",
+    "version":  "0.7.11",
+    "published":  "2026-09-03T08:33:24Z",
     "critical":  false,
-    "sha256":  "6540916664a305b5dd79458380baa73be587355ff61d69d50b9b48b63b637f3c",
-    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.10/VaultCove-0.7.10-R1-UPDATE-PUBLISH.zip",
+    "sha256":  "084894a811c2b4e8dcea71a861d749f5dbb47ae1a768f20862f10ec77d770019",
+    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.11/VaultCove-0.7.11-R1-UPDATE-PUBLISH.zip",
     "notesUrl":  "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
     "summary":  "Password-age review, editable Favorites, stable theme geometry, compact responsive GUI cleanup, SVG dashboard icons, and preserved secure Always-On login handling.",
     "schemaVersion":  3,
     "signatureAlgorithm":  "ECDSA-P256-SHA256",
-    "signature":  "Jdv4eZw9nybOhq26QWsf8SMNyHAW0ExIOFUBxF59_08E97wjoiBctFm3ZegjljnNUrrhyppm7jBVWaUhsIj1-Q"
+    "signature":  "czZWNuJFdpRJiCh-3FFqJFGLvx2dP0VPA2ScgzTVGcoljFiL6Dp9L5HfZij8eiMqdeBbiZz2xXLtNavNMj_f1A"
 }

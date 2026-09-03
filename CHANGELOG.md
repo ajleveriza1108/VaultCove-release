@@ -1,5 +1,13 @@
 # VaultCove Changelog
 
+## 0.7.11 R1
+- Fixed encrypted `.vcvault` restore: the restore flow now reads `restoreFile` and `restoreSecret`, snapshots both before Sensitive Access, and no longer dereferences the removed/nonexistent `importFile` control.
+- Hardened encrypted `.vckey` import by snapshotting its selected file before fresh authentication.
+- Added direct Chrome save-picker handling for `.vckey` export with pointer-lock release, visible cursor guard, user-cancel handling, and safe download fallback. The save destination is chosen before authentication but nothing is written until master-password verification and the separate `.vckey` password succeed.
+- Added new-vault-only Security Essentials setup: generic security-notice email, auto-lock timing, Authenticator setup, Offline Recovery Kit creation, secure handler/capture defaults, and master-password recovery acknowledgement. Existing upgraded vaults are not interrupted.
+- Added editable security-notice email in Settings and suppresses notice queueing until a valid recipient email is configured.
+- Added automated regression gates for restore control integrity, save-picker ordering/pointer state, and first-run security setup.
+
 ## 0.7.10 R1
 - Added a search box to **Vault Settings > Put logins in a folder**. Search matches login name/site, username, displayed account metadata, and current folder name; passwords are never included in organizer search.
 - Reduced the visual width of **Open and Secure Login** on Vault cards and added a dedicated Trash icon to Grid and List views.
