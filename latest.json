@@ -1,14 +1,14 @@
 {
     "product":  "VaultCove",
     "channel":  "dev",
-    "version":  "0.7.2",
-    "published":  "2026-09-03T05:16:51Z",
+    "version":  "0.7.3",
+    "published":  "2026-09-03T05:46:56Z",
     "critical":  false,
-    "sha256":  "fe3f152b71e4aa392915b7e52780e81fa3deab167943323e481dc140a5dcd850",
-    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.2/VaultCove-0.7.2-R1-UPDATE-PUBLISH.zip",
+    "sha256":  "504d60bc5e809a591a6987431490494cd7c2de84e408352c53ef21f6c270352b",
+    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.3/VaultCove-0.7.3-R1-UPDATE-PUBLISH.zip",
     "notesUrl":  "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
-    "summary":  "Dashboard ES-module startup repair, manifest-only Developer Always-On Handler, duplicate script-ID elimination, and startup watchdog diagnostics.",
+    "summary":  "Compact Dashboard GUI repair, SVG icon alignment, responsive layout polish, stale update-cache invalidation, and existing security/runtime protections.",
     "schemaVersion":  3,
     "signatureAlgorithm":  "ECDSA-P256-SHA256",
-    "signature":  "PV8RmG_aHpJ8EKeQqhidniQ99vaYuG1nKXU2g9S5UNKah6XZNsTXYaYrn3dFR_LFrwu-sCykhmXcHO-ip91bUg"
+    "signature":  "SRhWrGjUc2boyaRJFd7KR8wxss5Ym5_ExinGINxSS_Xkn9LhXH1CmvrY9ayVhuaJahyaYBk-On9YiqxPdxx1wA"
 }

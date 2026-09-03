@@ -1,5 +1,15 @@
 # VaultCove Changelog
 
+## 0.7.3 R1
+
+- Rebuilt the Dashboard visual hierarchy with compact SVG icon tiles instead of text squeezed inside icon containers.
+- Fixed Security Health, Recent Activity, Quick Actions and Browser Integration icon overflow and alignment defects visible at common desktop sizes.
+- Removed decorative arrow characters from Dashboard buttons and replaced dashboard graphics with packaged inline SVG icons.
+- Prevented Backup and Recovery from stretching to the height of Browser Integration, removing the large empty lower-panel area.
+- Added responsive 3-by-2 summary-card behavior on narrower desktop windows while retaining a compact six-card row on larger displays.
+- Fixed stale developer update status after upgrading VaultCove by invalidating cached update state when its recorded current version does not match the installed manifest version.
+- Added Dashboard GUI regression checks for icon architecture, compact layout and update-cache version invalidation.
+
 ## 0.7.2 R1
 - Developer toolbar refresh no longer records an on-demand injection session, preventing later navigation from injecting a second copy of the manifest handler.
 
