@@ -1,5 +1,15 @@
 # VaultCove Changelog
 
+## 0.7.2 R1
+- Developer toolbar refresh no longer records an on-demand injection session, preventing later navigation from injecting a second copy of the manifest handler.
+
+- Fixed the dashboard ES-module parse failure caused by an unescaped apostrophe in the imported .vckey help text. This was the direct reason VaultCove remained at Loading with an empty dashboard.
+- Added explicit ES-module syntax validation for every runtime JavaScript file so Chrome-module parse failures cannot pass the release gate.
+- Removed dynamic content-script registration from the Developer runtime. The Always-On Handler is now owned only by the manifest, eliminating the `vaultcove-inline-handler` duplicate-ID registration path.
+- Developer on-demand refresh now messages the already-installed handler instead of injecting a second copy.
+- Added a pre-module startup watchdog that shows a real startup failure instead of leaving the UI permanently at Loading if a module ever fails again.
+- Store-preflight remains permission-minimal and uses activeTab/on-demand filling while this handler registration repair is validated.
+
 ## 0.7.1 R2
 
 - Repaired the Store-preflight publisher so a Developer manifest that intentionally omits `optional_host_permissions` is handled safely under PowerShell StrictMode.

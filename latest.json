@@ -1,14 +1,14 @@
 {
     "product":  "VaultCove",
     "channel":  "dev",
-    "version":  "0.7.1",
-    "published":  "2026-09-03T02:55:00Z",
+    "version":  "0.7.2",
+    "published":  "2026-09-03T05:16:51Z",
     "critical":  false,
-    "sha256":  "f1866a63bf0a95ecea6ef12977ac50d59612dbb26225eeb86f3aed8e35b433df",
-    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.1/VaultCove-0.7.1-R2-UPDATE-PUBLISH.zip",
+    "sha256":  "fe3f152b71e4aa392915b7e52780e81fa3deab167943323e481dc140a5dcd850",
+    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.2/VaultCove-0.7.2-R1-UPDATE-PUBLISH.zip",
     "notesUrl":  "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
-    "summary":  "Store-preflight publisher repair for absent optional manifest properties; runtime remains VaultCove 0.7.1.",
+    "summary":  "Dashboard ES-module startup repair, manifest-only Developer Always-On Handler, duplicate script-ID elimination, and startup watchdog diagnostics.",
     "schemaVersion":  3,
     "signatureAlgorithm":  "ECDSA-P256-SHA256",
-    "signature":  "l2Vg9vgqd2_iPY3Z1drqFCj98D7go1CkinEv0JSVNiG0ic02SGjOn9Sibvv-XTm-TgE8YpQVctWKRqcPD9W5BQ"
+    "signature":  "PV8RmG_aHpJ8EKeQqhidniQ99vaYuG1nKXU2g9S5UNKah6XZNsTXYaYrn3dFR_LFrwu-sCykhmXcHO-ip91bUg"
 }
