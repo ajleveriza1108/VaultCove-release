@@ -1,5 +1,14 @@
 # VaultCove Changelog
 
+## 0.7.24 R1 — Final pre-licensing boundary hardening + cropped-profile Settings repair
+
+- Repairs the remaining profile-photo visual regression by rendering the persisted crop through a dedicated `<img>` element in Settings while retaining the compact header avatar path.
+- Adds profile-image decompression/dimension limits before cropping.
+- Upgrades the pre-licensing client/server request envelope to protocol v2 with request IDs, cryptographic nonces, timestamps, replay rejection, response-size limits, and client timeouts.
+- Adds release-boundary scanning for dangerous permissions, private-key/payment-secret patterns, dynamic code execution, source maps, unexpected externally-connectable/web-accessible surfaces, and unreviewed licensing endpoints.
+- Store preflight now forcibly disables Testing Full Access and fails if a Store package can bypass production licensing.
+- Developer GitHub updates remain signed and developer-only until Chrome Web Store distribution is ready.
+
 ## 0.7.22 R1 — Universal Login Compatibility + Vault Action Repair
 
 - Fixed the selected-item drawer actions that appeared clickable but did nothing. `Open or Edit`, `Add/Remove Favorites`, and `Mark changed today` now use real CSS selector wiring instead of the ID-only helper.

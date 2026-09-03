@@ -1,14 +1,14 @@
 {
     "product":  "VaultCove",
     "channel":  "dev",
-    "version":  "0.7.23",
-    "published":  "2026-09-03T23:10:48Z",
+    "version":  "0.7.24",
+    "published":  "2026-09-03T23:32:53Z",
     "critical":  false,
-    "sha256":  "347e0d99f8e3c20dcbdc6fae5c83885694ec1959ad1c6a2f6734b07e2591ffde",
-    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.23/VaultCove-0.7.23-R1-UPDATE-PUBLISH.zip",
+    "sha256":  "1fdb73c9a481f211def47c5d2008975944ed1c356499c254885ddec24c3d4446",
+    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.24/VaultCove-0.7.24-R1-UPDATE-PUBLISH.zip",
     "notesUrl":  "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
     "summary":  "Final-stage Recovery Kit authentication repair, Shared identity hide behavior, local profile personalization, branded offline status, selectable Vault cards, and local password-health analysis.",
     "schemaVersion":  3,
     "signatureAlgorithm":  "ECDSA-P256-SHA256",
-    "signature":  "BTBx3vAkIpOmv20oeHPYxWF9EhVIXbmGTk9_OeYV4MEcEwha9X6DJ7QWLH6fNyLUJ-V7BwfZTbrhTcUkGg-vtA"
+    "signature":  "ZsvgAUvqpfot1Pl9toMz-nT3x_MIlLFaPXK1DjYe-HwuiPRHT40sgB6KCPPkpCY035JSySSIuXcsvp4uqE1DFg"
 }
