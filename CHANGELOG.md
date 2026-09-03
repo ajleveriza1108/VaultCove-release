@@ -1,5 +1,21 @@
 # VaultCove Changelog
 
+## 0.6.0 R1
+
+- Added a one-time optional **Always-On Handler** HTTPS permission. After the user approves it, a persistent dynamic content script makes VaultCove appear automatically on supported login/password fields without first clicking the extension icon.
+- Preserved `activeTab` on-demand filling for users who do not grant Always-On access. Broad HTTPS access remains optional, never mandatory.
+- Added inline cryptographic password generation for signup, new-password and password-change forms. Generated values can fill matching New/Confirm Password fields directly.
+- Preserved separate encrypted review paths for new-account capture and password-change candidates; no silent permanent save/overwrite.
+- Added visual Grid/List Vault browsing modeled after website-card password managers, including visited-site favicon cards and private lock-card fallbacks.
+- Added optional Chrome `favicon` permission. Icons are read only from Chrome's local favicon cache and displayed only after a matching saved site has been visited while VaultCove is active; no third-party icon lookup is used.
+- Added global explanatory dashboard tooltips with hover/focus behavior and accessibility labels.
+- Hardened master-password changes: current-password verification, strong/different replacement requirement, exact confirmation phrase, optional authenticator/recovery verification, verify-before-commit key re-wrap, and immediate lock after success.
+- Added Google Authenticator-compatible local TOTP confirmation with manual setup URI/key plus one-time recovery codes. Google receives no password/vault data and no Google account connection is created.
+- Added an explicit security disclosure that local TOTP is an access-confirmation gate, not a separate cloud-held encryption key against full local-device compromise.
+- Upgraded VCShare to v2 multi-account bundles: up to 50 selected login cards in one recipient-encrypted, sender-signed `.vcshare`; v1 import compatibility is retained.
+- Added encrypted visited-site visual metadata and local mark-on-visit handling for saved matching logins only, not a general browsing-history log.
+- Expanded automated regression tests for Always-On permission architecture, inline generation, TOTP/recovery codes, atomic master rotation, VCShare bundles, tooltips, local favicon privacy, and encrypted site-visual metadata.
+
 ## 0.5.2 R1
 
 - Fixed master-password retry handling so a failed attempt cannot race with or visually override the next correct attempt.

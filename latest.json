@@ -1,14 +1,14 @@
 {
     "product":  "VaultCove",
     "channel":  "dev",
-    "version":  "0.5.2",
-    "published":  "2026-09-02T23:47:58Z",
+    "version":  "0.6.0",
+    "published":  "2026-09-03T01:04:26Z",
     "critical":  false,
-    "sha256":  "41bde24357b0dfffd91eb99ce1dd05a1ec4702aa23d734dc03cd03081d791376",
-    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.5.2/VaultCove-0.5.2-R1-UPDATE-PUBLISH.zip",
+    "sha256":  "2822dfd673fa70c2a053fe59a6f216cc1426ce3e6f6a2369dfed103cb57d89c1",
+    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.6.0/VaultCove-0.6.0-R1-UPDATE-PUBLISH.zip",
     "notesUrl":  "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
-    "summary":  "New-login capture, password-change review, per-site handler permissions, Secure Login field clearing, VCShare v1 and repaired Store build separation.",
+    "summary":  "Always-On secure handler, inline password generator, visual Vault cards, authenticator confirmation, verified master rotation and VCShare v2 bundles.",
     "schemaVersion":  3,
     "signatureAlgorithm":  "ECDSA-P256-SHA256",
-    "signature":  "xgTT2NTO2k6MTZO3ccyviTw040rlq5A-2y3er_y_NZQ18IH5z0a8eDAAweKdrd0jaJcgTHDPVJnBFGI5iUgqZw"
+    "signature":  "vK8zSRY22lTmNR9PkHlQa1BrLaEeyTgE5R7mJ3v0trRaf_p1-hDUm67od50QlEErZNI34FPUMP0c5h-HpRM2NQ"
 }
