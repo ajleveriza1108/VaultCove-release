@@ -1,5 +1,15 @@
 # VaultCove Changelog
 
+## 0.7.5 R1
+- Added local password-age review using trustworthy `lastPasswordChangeAt` metadata. Credentials with known password age at least 90 days are flagged for review; 180 days receives higher priority. Imported LastPass/Zoho records remain `Age unknown` unless the source explicitly contains a password-change timestamp.
+- Added direct editable Favorites controls to Grid and List views. Users can add or remove Favorites without opening the full credential editor; removing a Favorite never deletes the vault item.
+- Added `Mark changed today` for credentials whose password was changed outside VaultCove so users can establish an accurate local age baseline.
+- Replaced text placeholders such as LOGIN, BANK, MATCH, GOOD and decorative Quick Action glyphs with packaged SVG icons.
+- Reworked Dashboard, empty states, Security Center password-age review, Backup/Restore layout and responsive breakpoints for compact desktop use without overlap.
+- Rebuilt all six themes around one stable geometry contract. Theme changes modify palette and surface character only; sidebar width, card dimensions, control heights, gaps and breakpoints remain unchanged.
+- Made AMOLED true black, Graphite neutral charcoal, Ocean teal, Warm Ivory warm light and Light Gray cool light across Dashboard, Settings, Vault, dialogs, status surfaces, tooltips and popup.
+- Kept Testing Full Access with no trial enforcement.
+
 ## 0.7.4 R1
 - Fixed the inline handler menu closing while its own search box receives focus or the page rescans.
 - Always-On Handler now defaults on globally in the Developer build with a local per-site Off exception list.
