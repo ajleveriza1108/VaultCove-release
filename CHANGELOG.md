@@ -1,5 +1,13 @@
 # VaultCove Changelog
 
+## 0.7.7 R1
+- Added real encrypted Vault folders with create, rename, delete-without-deleting-items, filtering, item assignment, and migration folder preservation.
+- Added a universal local migration detector for 1Password, Bitwarden, LastPass, Dashlane, Keeper, NordPass, Proton Pass, RoboForm, Enpass, Zoho Vault, major browser password managers, and generic CSV/JSON exports. Added a broad manager-name recognition registry based on current migration ecosystems so many additional exports can be identified by filename plus schema and routed through safe generic CSV/JSON mapping when compatible.
+- Added 1Password 1PUX ZIP parsing and generic ZIP credential-export discovery without uploading source files. Native KeePass/KeePassXC .kdbx plus manager-specific XML/FSK/HTML/legacy 1PIF/SV containers are recognized but deliberately not guessed at; users receive a manager-aware safer export path.
+- Added Google Authenticator-gated .vckey-to-TXT conversion. Plaintext conversion requires fresh Sensitive Access, an enabled VaultCove TOTP/recovery-code factor, and the original .vckey password.
+- Added a mandatory plaintext warning explaining that TXT output is readable, contains public sharing identity material only, and must not replace the authenticated encrypted .vckey for trust decisions.
+- Preserved the 0.7.6 palette-only theme switching, Compact-interface isolation, dashboard icon cleanup, and existing security/runtime behavior.
+
 ## 0.7.6 R1
 - Fixed the appearance bootstrap regression that made the interface density change when a theme was selected. Saved theme and Compact interface state are now applied before the unlocked UI is shown.
 - Split appearance updates into independent paths: changing Theme updates palette/surfaces only, while Compact interface alone controls sidebar width, topbar height, content spacing, and density.
