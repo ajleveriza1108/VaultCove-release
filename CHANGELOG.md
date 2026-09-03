@@ -1,5 +1,13 @@
 # VaultCove Changelog
 
+## 0.7.22 R1 — Universal Login Compatibility + Vault Action Repair
+
+- Fixed the selected-item drawer actions that appeared clickable but did nothing. `Open or Edit`, `Add/Remove Favorites`, and `Mark changed today` now use real CSS selector wiring instead of the ID-only helper.
+- Expanded safe saved-site discovery so a credential saved for an apex domain such as `bdo.com.ph` can be recognized on its own HTTPS subdomains such as `online.bdo.com.ph`, including common multi-label public suffixes. A credential already scoped to a subdomain still cannot automatically expand into a deeper subdomain.
+- Added private-hosting tenant isolation for common shared hosting suffixes such as `github.io`, `pages.dev`, `vercel.app`, `netlify.app`, and similar services so one tenant is not treated as another tenant.
+- Hardened Strict Secure Login compatibility for React/Angular/Vue-style controlled login forms: username/email and password are set together, framework input/change state is synchronized only inside the one-shot Secure Login transaction, the site's visible Login/Sign in button is preferred over raw `requestSubmit()`, and the password is still cleared aggressively after submission or immediately on failure.
+- Preserved one-use five-second Secure Login capabilities, exact HTTPS/tab/top-frame authorization, HTTP capture-only behavior, encrypted locked capture, sealed Trash, Use-Only sharing, selective backup, Recovery Kit, and the unconfigured commercial license transport.
+
 ## 0.7.21 R1 — Core Security Hardening
 
 - Added one-use Secure Login capability tokens. A website handler first requests a short-lived authorization bound to one credential, one tab, the top frame, and the exact HTTPS origin; the token is deleted before the credential is released and expires after five seconds.
