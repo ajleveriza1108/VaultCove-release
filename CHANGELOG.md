@@ -1,14 +1,13 @@
 # VaultCove Changelog
 
-## 0.7.3 R1
-
-- Rebuilt the Dashboard visual hierarchy with compact SVG icon tiles instead of text squeezed inside icon containers.
-- Fixed Security Health, Recent Activity, Quick Actions and Browser Integration icon overflow and alignment defects visible at common desktop sizes.
-- Removed decorative arrow characters from Dashboard buttons and replaced dashboard graphics with packaged inline SVG icons.
-- Prevented Backup and Recovery from stretching to the height of Browser Integration, removing the large empty lower-panel area.
-- Added responsive 3-by-2 summary-card behavior on narrower desktop windows while retaining a compact six-card row on larger displays.
-- Fixed stale developer update status after upgrading VaultCove by invalidating cached update state when its recorded current version does not match the installed manifest version.
-- Added Dashboard GUI regression checks for icon architecture, compact layout and update-cache version invalidation.
+## 0.7.4 R1
+- Fixed the inline handler menu closing while its own search box receives focus or the page rescans.
+- Always-On Handler now defaults on globally in the Developer build with a local per-site Off exception list.
+- Added safe LastPass URL repair: old http URLs are upgraded to HTTPS, bare domains are normalized, and domain-like imported item names such as 9gag.com can provide a safe HTTPS fallback.
+- VaultCove still refuses to fill passwords over plain HTTP.
+- Reworked all six theme palettes so AMOLED, Graphite, Ocean, Warm Ivory, Light Gray, and Midnight use consistent surface, field, navigation, dialog, status, Vault-card, and tooltip colors.
+- Extended the same theme contract to the toolbar popup.
+- Added regression coverage for handler-menu persistence, per-site exclusions, legacy LastPass URL repair, and theme differentiation.
 
 ## 0.7.2 R1
 - Developer toolbar refresh no longer records an on-demand injection session, preventing later navigation from injecting a second copy of the manifest handler.

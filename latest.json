@@ -1,14 +1,14 @@
 {
     "product":  "VaultCove",
     "channel":  "dev",
-    "version":  "0.7.3",
-    "published":  "2026-09-03T05:46:56Z",
+    "version":  "0.7.4",
+    "published":  "2026-09-03T06:00:51Z",
     "critical":  false,
-    "sha256":  "504d60bc5e809a591a6987431490494cd7c2de84e408352c53ef21f6c270352b",
-    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.3/VaultCove-0.7.3-R1-UPDATE-PUBLISH.zip",
+    "sha256":  "083da3ede5c8c91864fbdd0fead5c877710004b020efe21067e2bfaca038d542",
+    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.4/VaultCove-0.7.4-R2-UPDATE-PUBLISH.zip",
     "notesUrl":  "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
-    "summary":  "Compact Dashboard GUI repair, SVG icon alignment, responsive layout polish, stale update-cache invalidation, and existing security/runtime protections.",
+    "summary":  "Stable Always-On handler menu, LastPass HTTPS repair, per-site handler exclusions, complete theme consistency, and version-aware developer update caching.",
     "schemaVersion":  3,
     "signatureAlgorithm":  "ECDSA-P256-SHA256",
-    "signature":  "SRhWrGjUc2boyaRJFd7KR8wxss5Ym5_ExinGINxSS_Xkn9LhXH1CmvrY9ayVhuaJahyaYBk-On9YiqxPdxx1wA"
+    "signature":  "J5x01KaYoIjDH6XHNd-8-ggtDbF8EQ5b8TqOy_TEff72gwHPmRR_Oy-3tJFoDvW-3d0Q38O4dC4r3HWO7osSPA"
 }
