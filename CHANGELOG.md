@@ -1,5 +1,15 @@
 # VaultCove Changelog
 
+## 0.7.20 R1 — Profile crop + HTTP/HTTPS locked capture + username/email pairing
+
+- Added a local profile-photo crop editor with drag positioning and 1x-3x zoom before saving the cropped photo.
+- The original uploaded profile image is never copied into VaultCove; only the locally generated 256 x 256 WebP crop is stored.
+- Developer handler coverage now includes both HTTP and HTTPS pages so submitted registrations/logins can be detected on legacy HTTP sites.
+- Locked-vault new-login capture is no longer suppressed by the content handler; it can be sealed into the public-key-encrypted local capture inbox for review after unlock.
+- Strict Secure Login remains HTTPS-only and explicitly refuses to submit a saved password over HTTP.
+- Strengthened username/email field heuristics for email inputs, username/email autocomplete values, labels/placeholders, and the nearest identifier field before a password field.
+- Secure Login continues to inject both username/email and password when both fields are present, while password Fill remains removed.
+
 ## 0.7.19 R1 — Local profile photo + locked capture inbox + launch defaults
 
 - Adds an optional local profile photo during first-run Security Essentials and in Settings. VaultCove resizes it on-device and stores it only in local extension storage; it is never uploaded or synced.
