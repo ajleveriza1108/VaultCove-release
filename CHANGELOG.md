@@ -1,5 +1,13 @@
 # VaultCove Changelog
 
+## 0.7.6 R1
+- Fixed the appearance bootstrap regression that made the interface density change when a theme was selected. Saved theme and Compact interface state are now applied before the unlocked UI is shown.
+- Split appearance updates into independent paths: changing Theme updates palette/surfaces only, while Compact interface alone controls sidebar width, topbar height, content spacing, and density.
+- Added a regression guard that rejects theme palette blocks containing geometry properties, preventing future themes from changing layout, card sizing, gaps, or responsive breakpoints.
+- Reworked the Dashboard summary icons highlighted in the UI audit: oversized circular badges are replaced by smaller consistent rounded-square icon tiles with equal sizing, neutral surfaces, and uniform alignment across Logins, Cards, Bank Accounts, Secure Notes, Identities, and TOTP Codes.
+- Removed the one-off Secure Notes summary icon background so every summary tile follows the same visual hierarchy.
+- Preserved the 0.7.5 password-age review, editable Favorites, Always-On Handler, LastPass HTTPS repair, recovery, sharing, licensing, and Testing Full Access behavior.
+
 ## 0.7.5 R1
 - Added local password-age review using trustworthy `lastPasswordChangeAt` metadata. Credentials with known password age at least 90 days are flagged for review; 180 days receives higher priority. Imported LastPass/Zoho records remain `Age unknown` unless the source explicitly contains a password-change timestamp.
 - Added direct editable Favorites controls to Grid and List views. Users can add or remove Favorites without opening the full credential editor; removing a Favorite never deletes the vault item.
