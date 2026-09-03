@@ -1,5 +1,16 @@
 # VaultCove Changelog
 
+## 0.7.21 R1 — Core Security Hardening
+
+- Added one-use Secure Login capability tokens. A website handler first requests a short-lived authorization bound to one credential, one tab, the top frame, and the exact HTTPS origin; the token is deleted before the credential is released and expires after five seconds.
+- Added strict runtime-message schemas and source checks. Web-handler messages carry a protocol version and request ID, unknown fields are rejected, and extension-only actions cannot be invoked by page handlers.
+- Added locked/new-login capture abuse controls: bounded usernames/passwords/page metadata, a 10-minute rate window, a 20-capture per-origin limit, and a 100-capture global limit.
+- Added an encrypted, tamper-evident local activity history. Security-relevant events are hash-chained inside the encrypted vault and can be verified from Security Center without storing passwords or secret values in the log.
+- Added mandatory Restore Preview for `.vcvault` restores. VaultCove decrypts the selected backup after Sensitive Access, summarizes components/counts/settings, and will not enable restore until that exact file+secret combination has been previewed.
+- Hardened migration parsing with a 25 MB file limit, 50,000-row limit, 256-column limit, 65,536-character field limit, 160-character header limit, and rejection of malformed unterminated quoted CSV fields.
+- Added explicit vault cryptographic profile/component version metadata and downgrade checks while retaining backward compatibility with existing VaultCove envelopes that predate the profile marker.
+- Preserved the 0.7.20 local profile crop, HTTP/HTTPS registration capture, HTTPS-only Strict Secure Login, folders, sealed Trash, selective backup, Recovery Kit, `.vckey`, `.vcshare`, and platform-neutral licensing groundwork.
+
 ## 0.7.20 R1 — Profile crop + HTTP/HTTPS locked capture + username/email pairing
 
 - Added a local profile-photo crop editor with drag positioning and 1x-3x zoom before saving the cropped photo.
