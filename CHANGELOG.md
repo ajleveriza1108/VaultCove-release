@@ -1,5 +1,15 @@
 # VaultCove Changelog
 
+## 0.7.12 R1
+- New encrypted `.vcvault` backup secrets are 256-bit random Base64URL tokens with no `VC`, `VC1-`, or `VaultCove` prefix. Legacy `VC1-...` secrets remain accepted for restore so existing backups are not broken. The missing prefix is camouflage only; security still comes from randomness and authenticated encryption.
+- Added `.vcshare` v3 as a dedicated password-sharing file format. User 1 selects owned login credentials, chooses a trusted recipient, creates a separate package password, and must freshly verify User 1's own Master Password before export.
+- `.vcshare` v3 uses recipient-bound P-256 ECDH/HKDF encryption plus sender ECDSA signatures, then wraps the recipient package in a second PBKDF2-HMAC-SHA-256 (600,000 iterations) + AES-256-GCM layer protected by User 1's package password.
+- Import requires the `.vcshare` package password and a fresh verification of User 2's own VaultCove Master Password. After successful recipient verification/decryption, the credential is immediately resealed under User 2's local vault key.
+- Imported shared credentials are **Use Only / immutable**: they cannot be revealed, copied, edited, favorited, reorganized as owned items, auto-login-enabled, password-change-captured, or reshared. The page handler offers Secure Login only.
+- Added a per-shared-item AES-256-GCM sealed credential envelope with a fresh random 256-bit item key wrapped by User 2's vault key. Plain username/password fields are empty in the normal decrypted vault model until the background service materializes them transiently for Secure Login.
+- Added optional 1-day, 7-day, 30-day, or no-expiration policy to new shared-access packages. Expired shared access is blocked.
+- Added regression coverage for prefixless backup secrets, legacy backup-secret compatibility, package-password rejection, wrong-recipient rejection, shared-credential plaintext leakage, second-envelope materialization, and no-reshare/no-edit enforcement.
+
 ## 0.7.11 R1
 - Fixed encrypted `.vcvault` restore: the restore flow now reads `restoreFile` and `restoreSecret`, snapshots both before Sensitive Access, and no longer dereferences the removed/nonexistent `importFile` control.
 - Hardened encrypted `.vckey` import by snapshotting its selected file before fresh authentication.
