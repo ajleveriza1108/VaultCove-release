@@ -1,3 +1,16 @@
+# VaultCove Changelog
+
+## 0.7.18 R1 — Recovery verification + personalized final-stage Vault UI
+- Fixes Offline Recovery Kit creation/restoration so the current Master Password is verified inside the Recovery Kit dialog instead of chaining a separate Sensitive Access dialog with the Recovery Password dialog.
+- Recovery Password remains a separate 16+ character premium-strength password and cannot equal the current Master Password.
+- Hiding an already revealed sharing identity is immediate and never asks for the Master Password; only Reveal Identity requires fresh verification.
+- Rewords the use-only notice around Shared Key(s).
+- Removes the Website thumbnails Settings card while keeping Chrome-local favicons enabled by default.
+- Adds a local display name during first-run Security Essentials and in Settings; the name personalizes the top-right profile and intentional public-sharing identity exports.
+- Replaces the Offline Only sidebar VC placeholder with the VaultCove shield mark.
+- Vault cards/list rows are directly selectable; the right-side panel starts neutral and follows the selected item.
+- Login selection adds local-only password health: Weak/Fair/Strong/Very strong, local entropy estimate, reuse status, and obvious issues without revealing the password.
+
 # Changelog
 
 ## 0.7.17 R1
