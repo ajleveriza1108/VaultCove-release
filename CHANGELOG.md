@@ -1,5 +1,20 @@
 # VaultCove Changelog
 
+## 0.7.27 R1 — Payhip protocol v3 + encrypted license credentials + 7-device owner-admin key
+
+- Advances the licensing protocol from v2 to v3.
+- Keeps the 7-day full-feature trial and uninstall data-loss disclosure.
+- Standard Payhip licenses remain limited to 7 active/retained device slots.
+- Owner-admin licensing is changed from 20 devices to exactly 7 devices.
+- Adds a locally generated private owner-admin key; the publisher stores its backup only as Windows-user DPAPI-protected data outside the Git repositories.
+- Adds per-device AES-256-GCM protection for the license key and refresh token using a non-extractable Web Crypto key persisted as a CryptoKey in extension-origin IndexedDB.
+- Removes plaintext license keys and refresh tokens from persistent Chrome local storage; legacy plaintext client state is migrated to ciphertext.
+- Removes raw Payhip license-key persistence from Apps Script Script Properties. The server now keeps only HMAC hashes and requires the device-encrypted key during lease revalidation.
+- Adds one-time owner-admin provisioning through temporary Script Properties; the raw owner key property is automatically deleted after provisioning.
+- Payhip refund/disable state is rechecked during signed-lease refresh and before device-management authorization.
+- Updates Apps Script acceptance tooling, security gates, documentation, and package publisher for protocol v3.
+- Version advanced from 0.7.26 to 0.7.27.
+
 ## 0.7.26 R1 — Full-source update/publish package + 7-day trial release hardening
 
 - Preserves the 7-day full-feature trial and clear uninstall data-loss disclosure from 0.7.25.
