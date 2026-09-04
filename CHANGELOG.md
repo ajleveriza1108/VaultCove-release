@@ -1,3 +1,14 @@
+# VaultCove 0.7.34 R1
+
+- Consolidated backup and disaster recovery into encrypted `.vcvault`; removed separate recovery-container runtime.
+- Backup snapshot v3 automatically includes protected sharing identity, trusted-share recovery metadata, VaultCove authenticator configuration, and device-recovery token.
+- Every new `.vcvault` uses a fresh random 256-bit Unique Backup Key required for preview/restore.
+- Added startup `.vcvault` restore and password-manager CSV import.
+- Removed Migration Center source-format selector and added automatic supported CSV layout detection.
+- Fixed first-run cropped profile-photo persistence/preview.
+- Fixed `.vcvault` restore preview overlap with wrapping/overflow-safe layout.
+- Maintains restore compatibility with backup snapshot v2 `.vcvault` files.
+
 # VaultCove 0.7.32 R1 — Activated-license cleanup + automatic device monitoring
 
 - Removes the VaultCove serial, License email, device-name fields, and activation button after the current installation is already licensed.
