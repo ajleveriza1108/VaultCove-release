@@ -1,3 +1,18 @@
+# VaultCove 0.7.43 R1
+
+- Keeps **Restore .vcvault** and **Import password-manager backup** active after the master-password vault has already been created.
+- Adds a visible **Duplicate-aware merge** policy and explicit **Merge into this vault** action.
+- Password-manager imports automatically detect likely duplicates and merge matching records instead of creating duplicates.
+- Login duplicate matching normalizes username + website host, so equivalent URLs such as `github.com/login` and `www.github.com/` match when the username is the same.
+- Duplicate merges add missing metadata, union URLs/tags/custom fields, and combine notes.
+- Existing conflicting passwords, TOTP secrets, card numbers, security codes, bank identifiers, PINs, and government IDs are preserved rather than overwritten automatically.
+- Re-importing the same source is idempotent and reports already-matched records.
+- Verified `.vcvault` files can be merged into the already-created startup vault without replacing existing current credentials.
+- Migration Center now uses the same automatic duplicate-aware merge policy; the old duplicate-handling checkbox is removed.
+- Improves startup GUI with **Finish setting up VaultCove**, active import cards, merge statistics, stronger hierarchy, and reduced dead space.
+- Preserves one-window startup, profile/photo crop, security settings, both acknowledgements, dashboard setup gate, anchored 7-day trial, licensing, and seven-device management.
+- No Apps Script redeployment is required.
+
 # VaultCove 0.7.42 R1
 
 - After the encrypted vault/master password has been successfully created or restored, the redundant **Master password** column is removed from the remaining first-run setup.
