@@ -1,14 +1,14 @@
 {
-    "product":  "VaultCove",
-    "channel":  "dev",
-    "version":  "0.7.28",
-    "published":  "2026-09-04T02:35:26Z",
-    "critical":  false,
-    "sha256":  "4bfebb5be9487ba34fd1371316794371911ffd4c7f5d95f71eea937d003f7986",
-    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.28/VaultCove-0.7.28-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
-    "notesUrl":  "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
-    "summary":  "Seven-day full-feature trial, clear uninstall data-loss disclosure, offline vault protection, and a self-contained full-source two-repository publisher.",
-    "schemaVersion":  3,
-    "signatureAlgorithm":  "ECDSA-P256-SHA256",
-    "signature":  "xRO3SRJvpUOMHXsKgaZj_-nMhT6_giDIZ3tbjigcqy0jkxR6niNGJ3T_Up4s3Aao3EC18cl5BgczPwZdKamhRg"
+  "product": "VaultCove",
+  "channel": "dev",
+  "version": "0.7.30",
+  "published": "2026-09-04T03:59:55Z",
+  "critical": false,
+  "sha256": "34843dd7b6db992da2e8ef0421a376e985df03e2ed2e8e6468d47b4e3a1685f4",
+  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.30/VaultCove-0.7.30-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
+  "notesUrl": "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
+  "summary": "Seven-day full-feature trial, clear uninstall data-loss disclosure, offline vault protection, and a self-contained full-source two-repository publisher.",
+  "schemaVersion": 3,
+  "signatureAlgorithm": "ECDSA-P256-SHA256",
+  "signature": "2M2SYwzDH9G33dKHCtc3sG4x3iMfhCnXtr2jlueJFKrd0LDGoq7epYbAd59TyM9obsbw6BZQK5njRQw1vAiYOg"
 }

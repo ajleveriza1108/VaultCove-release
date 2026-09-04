@@ -1,3 +1,18 @@
+# VaultCove 0.7.30 R1
+
+- Clarifies the Support tab with a visible **Email me for app improvements** action to `leveriza.aj08@gmail.com`.
+- Adds defense-in-depth backup recovery: damaged authenticated Trash records are skipped inside the backup snapshot, and the UI now retries without Trash if an older/edge Trash authentication error escapes the first isolation layer.
+- The customer is explicitly told when damaged Trash was omitted; healthy Logins, Cards, Bank Accounts, Identities, Secure Notes, TOTP data, folders, favorites, and selected settings remain exportable.
+- Adds a regression test proving the final encrypted portable export completes even with a deliberately damaged Trash envelope.
+- Preserves the 7-day full trial, Lifetime/no-annual-subscription licensing, Payhip protocol v3, 7-device customer/owner limits, local encrypted license storage, Strict Secure Login, and offline-first vault boundary.
+- Version advanced from 0.7.29 to 0.7.30.
+
+# VaultCove 0.7.29 R1
+
+- Fixed encrypted backup so an unauthenticatable/damaged legacy Trash envelope no longer blocks backup of healthy selected vault data; the damaged deleted item is explicitly skipped and counted.
+- Added an app-improvement email card to Support using `mailto:leveriza.aj08@gmail.com` with a prefilled subject and a warning never to email secrets.
+- Preserved Payhip and PayPal support links, local password-health drill-down, 7-day trial, 7-device licensing, and offline-first privacy boundaries.
+
 # VaultCove Changelog
 
 ## 0.7.28 R1 — Password-health credential drill-down + Support tab
