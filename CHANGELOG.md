@@ -1,3 +1,15 @@
+# VaultCove 0.7.52 R1
+
+- Makes the profile-photo cropper substantially more compact while keeping the crop preview, Zoom control, privacy note, Cancel, Close, and **Use cropped photo** controls visible and non-overlapping.
+- Constrains the crop dialog to the available viewport height and removes the excess empty space shown in compact extension windows.
+- Premium features now remain visible to Free users instead of disappearing completely. Locked features are visibly unavailable and expose a tooltip explaining the purpose of that specific feature.
+- Adds a dedicated **Premium** navigation tab for Free users with a complete Lifetime Premium feature catalog.
+- The Premium tab automatically disappears as soon as Premium Lifetime is active.
+- The Shared page now previews its Premium tools while locked rather than replacing the whole page with only an upgrade message.
+- The Security Center now shows locked previews for Password age review and Encrypted activity history while keeping Free weak/reused-password checks fully usable.
+- Adds a Premium marker and purpose tooltip to the locked Shared navigation item.
+- Preserves Free Forever, Premium Lifetime, 7-device Premium entitlement, 12-character strong master password, required Security notice email, startup CSV/.vcvault merge behavior, Enter-to-create-vault, and the non-overlapping startup Merge action.
+
 # VaultCove 0.7.51 R1
 
 - Fixes the startup password-manager **Merge** button overlap after CSV detection.
