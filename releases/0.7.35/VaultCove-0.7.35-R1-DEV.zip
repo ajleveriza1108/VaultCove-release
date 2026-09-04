@@ -1,0 +1,7 @@
+{
+  "product": "VaultCove",
+  "algorithm": "ECDSA-P256-SHA256",
+  "sha256": "0483671205f56474ac40d6647e498b78b51faa74cd43989f5b8a529d140e7fcb",
+  "signature": "Gte-EStgO_Zop3gKkBj0fRfF2NNK1DY1iaP90-42FbK9TFIrgEAYJeV_3Zrslq6c0tu6pBy0jpiO7NoXxXoLxw",
+  "publicKeySha256": "de232e9a6f243d36a73d1525be597dfc776bd0bcd9169aa9800cdac3db241401"
+}

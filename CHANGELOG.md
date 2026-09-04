@@ -1,3 +1,13 @@
+# VaultCove 0.7.35 R1
+
+- Added an immutable local trial anchor so the original 7-day trial start/expiry survives normal reloads and source/version updates and cannot be restarted by loss/reset of the mutable trial-state record.
+- Added visible trial start/end timestamps in License & Devices.
+- Reworked first-run creation into three explicit paths: Start fresh, Restore .vcvault, or Import password-manager logins.
+- Restore/import selections must be verified locally before Create vault can continue.
+- Finish security setup is disabled until both required acknowledgement checkboxes are selected.
+- Preserved unified .vcvault recovery, automatic CSV source detection, cropped-profile persistence, and overlap-safe backup preview.
+- No Apps Script/licensing backend change is required.
+
 # VaultCove 0.7.34 R1
 
 - Consolidated backup and disaster recovery into encrypted `.vcvault`; removed separate recovery-container runtime.
