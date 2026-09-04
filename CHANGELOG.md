@@ -1,3 +1,17 @@
+# VaultCove 0.7.45 R1
+
+- Adds a **copy icon** beside the developer support email. Clicking it copies only `leveriza.aj08@gmail.com` to the clipboard; the normal email link remains available.
+- Adds an automatic protected **Shared Keys** system folder for received use-only `.vcshare` login access.
+- Every newly received shared login is placed directly in **Shared Keys**.
+- Existing received shared logins from earlier VaultCove versions are automatically organized into **Shared Keys** the next time the unlocked vault starts.
+- **Shared Keys** cannot be renamed or deleted, and normal owned logins cannot be manually moved into it.
+- Makes **Security notice email** mandatory during first-run setup.
+- **Finish Setup** remains disabled until the encrypted vault exists, the security notice email has a valid local email syntax, and both required acknowledgements are checked.
+- Improves local email validation for address length, local-part rules, domain labels, repeated dots, and top-level domain format. VaultCove does not perform online mailbox verification.
+- Renames **Finish security setup** to **Finish Setup**.
+- Preserves 12-character strong master-password policy, duplicate-aware import/merge, one-window startup, dashboard setup gate, anchored 7-day trial, licensing, and seven-device management.
+- No Apps Script redeployment is required.
+
 # VaultCove 0.7.44 R1
 
 - Changes the VaultCove **master password minimum from 16 characters to 12 characters**.
