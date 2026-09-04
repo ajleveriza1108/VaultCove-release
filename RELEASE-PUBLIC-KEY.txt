@@ -2,4 +2,4 @@ VaultCove release signing public key (SPKI DER, Base64)
 MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEMWA46Ij77aUnkgUqVj7S0u/xM/mOcJFIy/fsUQjbsXGI2C1oKbKC4er9h5Ms/680VYgJzMoBbb9pdnF1L8BGHg==
 
 SHA-256 fingerprint: de232e9a6f243d36a73d1525be597dfc776bd0bcd9169aa9800cdac3db241401
-The private release-signing key is never stored in this repository.
+Private signing material is never stored in either repository.

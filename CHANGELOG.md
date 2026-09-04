@@ -1,5 +1,28 @@
 # VaultCove Changelog
 
+## 0.7.26 R1 — Full-source update/publish package + 7-day trial release hardening
+
+- Preserves the 7-day full-feature trial and clear uninstall data-loss disclosure from 0.7.25.
+- Adds the required self-contained release workflow: one BAT launcher plus one PowerShell publisher, with the complete source embedded in the publisher payload.
+- Updates the canonical project at `D:\\Windows Projects\\VaultCove`, creates a rollback backup first, runs all mandatory tests, builds signed developer/store/update artifacts, then updates both VaultCove repositories.
+- Includes the source-only Google Apps Script licensing backend in the canonical source while keeping it out of runtime extension packages.
+- Adds release-boundary testing to the publisher gate and keeps source/release publication fail-closed.
+- Version advanced from 0.7.25 to 0.7.26.
+
+## 0.7.25 R1 — 7-day full trial + uninstall data-loss disclosure
+
+- Replaces permanent testing Full Access with a real 7-day full-feature trial.
+- Trial starts when the extension is first initialized and runs for exactly seven days.
+- All normal VaultCove features remain available during the active trial.
+- After expiry, normal vault operations are disabled while encrypted Backup & Restore and License & Devices remain available.
+- Adds trial countdown labels in the dashboard and popup.
+- Adds first-run, dashboard, browser-notification, final-day, and expiry notices.
+- Explicitly warns that removing the Chrome extension permanently deletes credentials stored in extension-local storage; explicitly exported encrypted backup files remain separate.
+- Adds local clock-rollback resistance so moving the system clock backwards does not extend the observed trial window.
+- Keeps the vault offline: trial state uses chrome.storage.local and never chrome.storage.sync.
+- Fixes the background signed-license refresh alarm so an existing refresh token is actually retried against the build-managed endpoint.
+- Version advanced from 0.7.24 to 0.7.25.
+
 ## 0.7.24 R1 — Final pre-licensing boundary hardening + cropped-profile Settings repair
 
 - Repairs the remaining profile-photo visual regression by rendering the persisted crop through a dedicated `<img>` element in Settings while retaining the compact header avatar path.

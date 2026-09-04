@@ -1,11 +1,11 @@
 # VaultCove Release Channel
 
-Public developer-release metadata and signed packages for VaultCove.
+Signed developer update packages and Chrome Web Store preflight artifacts for VaultCove.
 
-- Source project: ajleveriza1108/VaultCove
-- Update metadata: latest.json
-- Current developer package: releases/0.7.24/VaultCove-0.7.24-R1-UPDATE-PUBLISH.zip
-- Package/update metadata are signed with the VaultCove release-signing key.
-- The signing private key, master passwords, vault keys, licensing secrets, and user vault data are never committed here.
-
-The future Chrome Web Store build uses Chrome's official update mechanism instead of this Developer Mode channel.
+- Current release: releases/0.7.26
+- Self-contained updater: releases/0.7.26/VaultCove-0.7.26-R1-FULL-SOURCE-UPDATE-PUBLISH.zip
+- Developer extension: releases/0.7.26/VaultCove-0.7.26-R1-DEV.zip
+- Store preflight: releases/0.7.26/VaultCove-0.7.26-R1-STORE-PREFLIGHT.zip
+- Source repository: ajleveriza1108/VaultCove
+- The updater package contains exactly one BAT and one PS1; the PS1 embeds the full verified source payload.
+- Private signing keys, licensing secrets and user vault data are never committed.
