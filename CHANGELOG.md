@@ -1,3 +1,14 @@
+# VaultCove 0.7.40 R1
+
+- Replaces the two-screen first-run flow with one rectangular startup window.
+- Keeps profile name, cropped profile photo, direct .vcvault restore, automatic password-manager CSV import, master-password creation, security email, auto-lock, Authenticator status, backup reminder, secure defaults, both acknowledgements, and Finish security setup in the same window.
+- Fresh start remains automatic; no radio-mode selection is shown.
+- Create encrypted vault no longer navigates to a second startup screen. The same window remains visible and unlocks the final security completion step.
+- Finish security setup requires both acknowledgements and a successfully created/restored local vault.
+- Desktop layout uses three columns and compact height handling to fit a normal rectangular browser window without vertical scrolling; narrow windows fall back safely to scrolling.
+- Preserves anchored 7-day trial, unified .vcvault recovery, automatic CSV source detection, Payhip licensing, and seven-device management.
+- No Apps Script redeployment is required.
+
 # VaultCove 0.7.39 R1
 
 - Repairs the full-source updater baseline gate that incorrectly omitted installed version 0.7.37.
