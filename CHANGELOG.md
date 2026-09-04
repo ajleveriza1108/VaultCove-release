@@ -1,3 +1,19 @@
+# VaultCove 0.7.54 R1
+
+- Reworks **Security Health** so weak passwords explicitly count as risk.
+- Adds a unique **At-risk credentials** count: a login that is both weak and reused is counted once in the at-risk total, while both risk findings remain visible.
+- Separates the numeric **Security score /100** from **At-risk credentials** and **Risk findings**, eliminating the confusing `0 At risk` presentation.
+- Adds an **At risk** Security Center filter for credentials that are weak, reused, or both.
+- Security score severity now changes between Protected, Needs attention, At risk, and High risk.
+- Free users still see Password Age Review as a locked Premium feature with a purpose tooltip, without exposing Premium-only result counts.
+- Redesigns the Security Center overview into a compact risk dashboard.
+- Redesigns the Premium tab into grouped **Advanced Security**, **Secure Sharing**, and **Premium Devices** sections with a clearer Lifetime/no-subscription/7-device summary.
+- Replaces repetitive disabled `Premium required` buttons with cleaner locked-state indicators.
+- Adds accessible hover/focus purpose tooltips to visible locked Premium features.
+- Redesigns the locked Shared page as a four-step secure-sharing workflow.
+- Keeps the Premium tab hidden after Premium Lifetime activation.
+- Preserves Free Forever, 12-character strong master password, startup import/restore behavior, protected Shared Keys, duplicate-aware merge, and the compact profile cropper.
+
 # VaultCove 0.7.52 R1
 
 - Makes the profile-photo cropper substantially more compact while keeping the crop preview, Zoom control, privacy note, Cancel, Close, and **Use cropped photo** controls visible and non-overlapping.
