@@ -1,14 +1,14 @@
 {
   "product": "VaultCove",
   "channel": "dev",
-  "version": "0.7.31",
-  "published": "2026-09-04T04:43:27Z",
+  "version": "0.7.32",
+  "published": "2026-09-04T07:44:06Z",
   "critical": false,
-  "sha256": "7ef773194823b0816e3503ce70508495741b86c8d66bc7f6d1976e3c06fa0444",
-  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.31/VaultCove-0.7.31-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
+  "sha256": "b34be673136f0444b8809ddec88e6a199c29a15433bbc16543083c46f1aac793",
+  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.32/VaultCove-0.7.32-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
   "notesUrl": "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
   "summary": "Production Payhip + Apps Script licensing, seven-day full trial, Lifetime/no-annual-subscription model, seven-device ledger, resilient encrypted backups, and full-source two-repository publisher.",
   "schemaVersion": 3,
   "signatureAlgorithm": "ECDSA-P256-SHA256",
-  "signature": "kQcAsmoqEUfnrOCVkPR0lmD2EvlycpqHLCLivlR77-RFfjjjcAdY8wC1vPZlrGKYxy-YvlVYp1fcJdW43mEwdg"
+  "signature": "0zCWpFrCzsmqQgvB6elFM5CsU2I4XitN9kjg1EzGZL-DNNuUA1nKReIuEWNpRht4a5_wCg3SOPGH-a3tT7HHew"
 }

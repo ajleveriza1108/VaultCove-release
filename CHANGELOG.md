@@ -1,3 +1,14 @@
+# VaultCove 0.7.32 R1 — Activated-license cleanup + automatic device monitoring
+
+- Removes the VaultCove serial, License email, device-name fields, and activation button after the current installation is already licensed.
+- Keeps only the signed license status plus Refresh signed license and Release this device slot actions on an activated installation.
+- Automatically shows all device records associated with the same VaultCove license using the already encrypted device refresh credential and license serial.
+- Keeps device monitoring read-only by default; Retain, Release, Revoke, and Restore continue to require a fresh email OTP and short-lived management session.
+- Adds the protocol-v3 `listOwnDevices` read-only action. It returns device labels, platform/app version, status, and first/last-seen times only; it never returns refresh-token hashes, recovery-token hashes, the raw serial, or vault data.
+- Removes a duplicate JSON parse in the license client response path.
+- Rolls the canonical Apps Script source forward to the production backend with explicit UTF-8 RSA signing and the current server-performance fixes.
+- Preserves 7-day full trial, Lifetime/no-annual-subscription licensing, 7-device Standard/Admin limits, local encrypted credential storage, Payhip email binding, OTP, and Strict Secure Login.
+
 # VaultCove 0.7.31 R1 — Production Licensing Connected
 
 - Connects the approved Google Apps Script production `/exec` licensing endpoint.
