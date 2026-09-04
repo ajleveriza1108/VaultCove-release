@@ -1,14 +1,14 @@
 {
   "product": "VaultCove",
   "channel": "dev",
-  "version": "0.7.45",
-  "published": "2026-09-04T14:09:58Z",
+  "version": "0.7.47",
+  "published": "2026-09-04T21:27:11Z",
   "critical": false,
-  "sha256": "df3d605e0ebd9d3bc509a86822d22a60bb958b7335f6c4464819ca428c3eeaae",
-  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.45/VaultCove-0.7.45-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
+  "sha256": "9e398c9ebc1207dc9ffc0cc7eb02ebb6f2824a743587899d8950c5bb6e9303bc",
+  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.47/VaultCove-0.7.47-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
   "notesUrl": "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
-  "summary": "Unified .vcvault recovery, startup restore/import, automatic password-manager detection, profile-crop fix, responsive backup preview, production licensing, and full-source two-repository publisher.",
+  "summary": "Free Forever core vault access, optional Premium Lifetime advanced security and secure sharing, preserved .vcvault recovery, startup import, licensing, and full-source publishing.",
   "schemaVersion": 3,
   "signatureAlgorithm": "ECDSA-P256-SHA256",
-  "signature": "ht2IgWoqyngDT1Oh7AXiAnj7o50JC-cwoV9Ay4qyOdJaJ6DsQRmOuRc2fgsI6pljVBKzErGkhoLkH18XGrNt9g"
+  "signature": "00bzzfdLiskGMyDOVVxmIXnIwgZ5yIDEpUwkguQbmlEAZAfGQGerCuU745tHhUQl8efZCqkEuAw8Mza3o69Bww"
 }

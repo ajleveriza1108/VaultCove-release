@@ -1,3 +1,27 @@
+# VaultCove 0.7.47 R1
+
+- Replaces the expiring 7-day trial with **VaultCove Free Forever**.
+- Free Forever never locks the user's local encrypted vault and keeps core editing, Secure Login/Autofill, TOTP, generator, import/export, `.vcvault` backup/restore, duplicate-aware merge, and weak/reused-password Security Center available.
+- Existing valid signed Standard/owner-admin licenses are treated as **Premium Lifetime** with no annual subscription and up to 7 Premium device slots.
+- Premium Lifetime unlocks **Advanced Security Center** password-age review and tamper-evident encrypted activity history.
+- Premium Lifetime unlocks **Secure Sharing and Shared Keys** (`.vckey` / `.vcshare`) while received use-only shared credentials remain protected inside the Shared Keys system folder.
+- Removes trial welcome/last-day/expiry notifications, trial expiry redirects, trial feature lockouts, and the trial modal.
+- Replaces the startup trial badge with **Free Forever** and keeps the uninstall/encrypted-backup acknowledgement as a required setup safety disclosure.
+- Deletes obsolete local trial timing/anchor metadata during normal initialization.
+- Updates License & Devices to show Free Forever or Premium Lifetime clearly and preserves the existing privacy-preserving seven-device Premium management workflow.
+- Chrome Web Store build remains Store-managed for updates and contains no Developer GitHub updater.
+- No Apps Script redeployment or signing-key rotation is required.
+
+# VaultCove 0.7.46 R1
+
+- Makes **Finish Setup permanently visible** in the first-run rectangular window, even when `.vcvault` verification, preview, duplicate analysis, or merge controls expand the left column.
+- Restructures the desktop setup card into three invariant rows: header, bounded setup content, and a reserved footer containing both acknowledgements, errors, **Finish Setup**, and privacy indicators.
+- Setup columns now scroll internally only when their content exceeds the available viewport height, so no startup element is clipped or pushed outside the window.
+- `.vcvault` verification and merge results automatically scroll into view inside the Profile/Backup/Import column without moving the Finish Setup footer.
+- Adds a sticky footer fallback on narrow windows so Finish Setup remains reachable there as well.
+- Preserves required security notice email validation, Shared Keys organization, support email copy, 12-character strong master-password policy, duplicate-aware merge, anchored 7-day trial, licensing, and seven-device management.
+- No Apps Script redeployment is required.
+
 # VaultCove 0.7.45 R1
 
 - Adds a **copy icon** beside the developer support email. Clicking it copies only `leveriza.aj08@gmail.com` to the clipboard; the normal email link remains available.
