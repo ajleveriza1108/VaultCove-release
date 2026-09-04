@@ -1,11 +1,21 @@
-# VaultCove 0.7.30 R1
+# VaultCove 0.7.31 R1 — Production Licensing Connected
+
+- Connects the approved Google Apps Script production `/exec` licensing endpoint.
+- Embeds only the matching RSA-3072 **public** lease-verification key; server private signing material remains outside the extension.
+- Enables real Payhip buyer-email + license-key activation, email OTP, signed seven-day offline leases, and the VaultCove 7-device ledger.
+- Keeps both standard customer licenses and owner/admin licenses at a maximum of 7 devices.
+- Keeps the 7-day full trial, Lifetime/no-annual-subscription model, encrypted local license-key/refresh-token storage, Support email, password-health drill-down, and damaged-Trash backup resilience.
+- Adds production-config tests that reject an unconfigured endpoint/key or a malformed/non-RSA-3072 public key.
+- No Payhip Product Secret, RSA private key, license pepper, raw owner/admin key, master password, vault key, or vault contents are embedded in the runtime.
+
+# VaultCove 0.7.31 R1
 
 - Clarifies the Support tab with a visible **Email me for app improvements** action to `leveriza.aj08@gmail.com`.
 - Adds defense-in-depth backup recovery: damaged authenticated Trash records are skipped inside the backup snapshot, and the UI now retries without Trash if an older/edge Trash authentication error escapes the first isolation layer.
 - The customer is explicitly told when damaged Trash was omitted; healthy Logins, Cards, Bank Accounts, Identities, Secure Notes, TOTP data, folders, favorites, and selected settings remain exportable.
 - Adds a regression test proving the final encrypted portable export completes even with a deliberately damaged Trash envelope.
 - Preserves the 7-day full trial, Lifetime/no-annual-subscription licensing, Payhip protocol v3, 7-device customer/owner limits, local encrypted license storage, Strict Secure Login, and offline-first vault boundary.
-- Version advanced from 0.7.29 to 0.7.30.
+- Version advanced from 0.7.29 to 0.7.31.
 
 # VaultCove 0.7.29 R1
 
