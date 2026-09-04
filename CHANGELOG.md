@@ -1,3 +1,22 @@
+# VaultCove 0.7.37 R1
+
+- Repairs the self-contained Windows update/publish package: restores the missing `Write-Step`, `Write-Pass`, `Write-Info`, and `Write-Warn` helpers before the pipeline starts.
+- Rebuilds the BAT launcher as UTF-8 without BOM so `@echo off` is honored by Windows CMD and command lines are no longer echoed.
+- Adds publisher-package regression validation so every `Write-*` logging helper referenced by the PS1 must be defined before release packaging.
+- Preserves the complete 0.7.36 product behavior: direct startup Restore `.vcvault` / Import password-manager backup actions, automatic fresh start, automatic CSV source detection, two-screen readable Security Essentials, required acknowledgement gate, anchored 7-day trial, unified `.vcvault` recovery, Payhip licensing, and device management.
+- No Apps Script redeployment or signing-key rotation is required.
+
+# VaultCove 0.7.36 R1
+
+- Removed the first-run radio/selection chooser. Starting fresh is now automatic when the user creates a vault without importing anything.
+- Added two direct startup actions: **Restore .vcvault** and **Import password-manager backup**. Clicking either immediately opens the relevant file picker.
+- Password-manager CSV source detection now runs automatically as soon as the user chooses an export; there is no source selector and no extra detect button.
+- .vcvault restore remains locally authenticated with its unique Backup Key before the backup can be applied.
+- Rebuilt first-run Security Essentials into a two-column second screen so the startup flow fits within one normal desktop viewport without requiring vertical scrolling.
+- Increased first-run headings, labels, controls, explanatory text, acknowledgements, and action-card font sizes for readability instead of shrinking the UI to fit.
+- Preserved the acknowledgement gate: Finish security setup remains disabled until both required acknowledgements are checked.
+- Preserved the anchored 7-day trial, unified .vcvault recovery, cropped profile-photo persistence, automatic migration detection, and the production licensing backend unchanged.
+
 # VaultCove 0.7.35 R1
 
 - Added an immutable local trial anchor so the original 7-day trial start/expiry survives normal reloads and source/version updates and cannot be restarted by loss/reset of the mutable trial-state record.
