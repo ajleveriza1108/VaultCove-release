@@ -1,3 +1,14 @@
+# VaultCove 0.7.49 R1
+
+- **Startup import commit repair:** a password-manager CSV selected and detected during startup is now automatically applied before **Finish Setup** opens the dashboard.
+- A verified `.vcvault` selected during startup is likewise applied automatically on **Finish Setup** if the user has not already used the explicit merge button.
+- **Finish Setup is now the transaction boundary for all startup choices:** profile name, cropped profile photo, security notice email, email-notice preference, auto-lock interval, Authenticator state, and prepared import/restore are committed before the dashboard opens.
+- If a selected CSV preview is stale or missing, Finish Setup re-detects it locally before applying it. If a selected `.vcvault` or Backup Key changed, Finish Setup re-verifies the backup before applying it.
+- User-selected startup profile photo and locally configured Authenticator take precedence over imported portable settings, preventing a backup from silently undoing choices made in the current startup screen.
+- Successful imports performed during initial vault creation are consumed immediately so they cannot be applied a second time when Finish Setup is clicked.
+- Startup import previews now explicitly state that the prepared import will be applied automatically by Finish Setup.
+- Preserves Free Forever, Premium Lifetime, 12-character strong master password, required valid Security notice email, protected Shared Keys, duplicate-aware merge, and the 0.7.48 critical Finish Setup repair.
+
 # VaultCove 0.7.48 R1
 
 - **Critical Finish Setup repair:** removes the stale `acknowledgeTrialNotice()` call that caused `acknowledgeTrialNotice is not defined` after completing startup.
