@@ -1,3 +1,14 @@
+# VaultCove 0.7.51 R1
+
+- Fixes the startup password-manager **Merge** button overlap after CSV detection.
+- Moves the source-aware Merge action above the import preview/statistics so a long preview cannot cover it or push it against the bottom scroll boundary.
+- Removes the sticky-bottom implementation that made the action appear clipped or almost invisible.
+- Gives the active Merge action a full-width, high-contrast primary-button treatment.
+- Keeps the disabled pre-vault Merge action visible but clearly inactive; creating the encrypted vault still automatically applies the prepared import.
+- Startup import auto-scroll now prioritizes the visible Merge action.
+- The label remains dynamic for every supported detected password manager.
+- Preserves Enter-to-create-vault, duplicate-aware merge, Free Forever, Premium Lifetime, Shared Keys, required Security notice email, and the always-visible Finish Setup footer.
+
 # VaultCove 0.7.50 R1
 
 - Adds **Enter-to-create** on first master-password setup in both the extension popup and the full-page startup screen. When all strong-password requirements pass and both password fields match, pressing Enter activates **Create vault** without requiring a mouse click.
