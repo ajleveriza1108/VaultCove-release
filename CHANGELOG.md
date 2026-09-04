@@ -1,3 +1,22 @@
+# VaultCove 0.7.39 R1
+
+- Repairs the full-source updater baseline gate that incorrectly omitted installed version 0.7.37.
+- The publisher now accepts every supported VaultCove baseline from 0.7.22 through 0.7.39, including 0.7.36, 0.7.37, and 0.7.38.
+- Adds a publisher self-check that confirms the immediately previous release is present in the accepted baseline list before any project mutation begins.
+- Preserves all 0.7.38 product behavior: two-screen startup, local name/profile-photo setup, cropped photo persistence, direct .vcvault restore, automatic password-manager import detection, anchored 7-day trial, acknowledgement gate, Payhip licensing, and seven-device management.
+- No Apps Script redeployment, private-key change, pepper change, or licensing reset is required.
+
+# VaultCove 0.7.38 R1
+
+- Fixes the startup-layout regression: the 0.7.36/0.7.37 override was written into `vault.css` with literal escaped-newline text, so Chromium ignored the intended layout rules. This caused native file inputs to stay visible, restore/import button text to overlap, and the second-screen two-column layout not to apply.
+- Rebuilds startup as visibly labeled Step 1 of 2 and Step 2 of 2.
+- Step 1 keeps automatic fresh start and only two direct optional actions: Restore .vcvault and Import password-manager backup. No radio buttons and no default fresh-start pseudo-selection card.
+- Step 2 explicitly retains Your name, Profile photo, local crop/persistence behavior, Security notice email, Auto-lock, Authenticator, secure defaults, and both required acknowledgements.
+- Restores truly hidden native file inputs so only the styled restore/import buttons are visible.
+- Uses wide two-column desktop layouts with larger typography and compact-height handling so both screens fit a normal desktop viewport without vertical scrolling. Small windows safely fall back to a scrollable single column.
+- Preserves anchored 7-day trial, unified .vcvault recovery, automatic CSV source detection, Payhip licensing, and seven-device management.
+- No Apps Script redeployment is required.
+
 # VaultCove 0.7.37 R1
 
 - Repairs the self-contained Windows update/publish package: restores the missing `Write-Step`, `Write-Pass`, `Write-Info`, and `Write-Warn` helpers before the pipeline starts.
