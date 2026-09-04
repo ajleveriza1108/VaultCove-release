@@ -1,3 +1,13 @@
+# VaultCove 0.7.50 R1
+
+- Adds **Enter-to-create** on first master-password setup in both the extension popup and the full-page startup screen. When all strong-password requirements pass and both password fields match, pressing Enter activates **Create vault** without requiring a mouse click.
+- Makes the password-manager merge CTA universal: every successfully detected supported CSV import now exposes a visible **Merge <detected source>** action, not only a particular manager.
+- Before the encrypted vault exists, the detected-source merge action remains visible but disabled with an explanation; creating the vault automatically applies the prepared import.
+- After the encrypted vault exists, the same detected-source merge action is enabled immediately and uses the existing duplicate-aware merge engine.
+- Keeps the merge CTA sticky inside the scrollable startup import column so it cannot disappear below a long import preview.
+- Preserves Free Forever, Premium Lifetime, 12-character strong master-password policy, required Security notice email, automatic startup CSV detection, duplicate-aware merge, protected Shared Keys, and always-visible Finish Setup.
+- No Apps Script redeployment is required.
+
 # VaultCove 0.7.49 R1
 
 - **Startup import commit repair:** a password-manager CSV selected and detected during startup is now automatically applied before **Finish Setup** opens the dashboard.
