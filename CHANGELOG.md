@@ -1,3 +1,15 @@
+# VaultCove 0.7.48 R1
+
+- **Critical Finish Setup repair:** removes the stale `acknowledgeTrialNotice()` call that caused `acknowledgeTrialNotice is not defined` after completing startup.
+- **Finish Setup now completes normally** under the Free Forever + Premium Lifetime model, saves first-run security settings, and opens the dashboard.
+- Removes the obsolete restore/import runtime error that still required an active trial or license; encrypted `.vcvault` restore remains a Free Forever core feature.
+- Removes remaining active-runtime 7-day-trial wording from the first-run completion path and plan badge.
+- Keeps the uninstall/encrypted-backup acknowledgement required, with wording that matches the current Free Forever model.
+- Adds release-blocking regression checks so any future `acknowledgeTrialNotice` reference fails static security validation.
+- Expands stale-trial checks to reject `7-day trial`, `active trial`, and `trial or license` runtime wording.
+- Preserves the 12-character strong master password, required valid Security notice email, always-visible Finish Setup footer, duplicate-aware import/merge, protected Shared Keys, Premium Lifetime gates, and seven-device Premium licensing.
+- No Apps Script redeployment is required.
+
 # VaultCove 0.7.47 R1
 
 - Replaces the expiring 7-day trial with **VaultCove Free Forever**.
