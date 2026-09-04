@@ -1,5 +1,20 @@
 # VaultCove Changelog
 
+## 0.7.28 R1 — Password-health credential drill-down + Support tab
+
+- Makes Dashboard **Weak Passwords** and **Reused Passwords** interactive; clicking either opens Security Center filtered to the exact affected credential records.
+- Adds a dedicated **Password strength and reuse** section in Security Center with per-login strength bars, local Weak/Fair/Strong/Very strong labels, reuse counts, and credential-detail actions.
+- Adds clickable Weak/Reused statistic cards inside Security Center.
+- Keeps passwords hidden in the health list; opening credential details continues to use the existing protected item workflow and Sensitive Access for secrets.
+- Adds a **Support** navigation tab.
+- Adds the official Payhip store link: `https://payhip.com/AJCoderDigitalStore`.
+- Adds **Buy me a decaf** PayPal support link: `https://paypal.me/ajleveriza`.
+- Adds the Payhip link at the bottom-right beside **VaultCove is offline by design.**
+- Support links are user-initiated only and do not send vault data, passwords, site lists, master passwords, or security scores.
+- Adds no new Chrome permissions, analytics, telemetry, cloud-vault storage, or background support requests.
+- Preserves the 7-day full trial, Lifetime/no-annual-subscription licensing model, protocol v3, and 7-device Standard/Owner-Admin limits.
+- Version advanced from 0.7.27 to 0.7.28.
+
 ## 0.7.27 R1 — Payhip protocol v3 + encrypted license credentials + 7-device owner-admin key
 
 - Advances the licensing protocol from v2 to v3.

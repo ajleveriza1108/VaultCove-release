@@ -1,14 +1,14 @@
 {
     "product":  "VaultCove",
     "channel":  "dev",
-    "version":  "0.7.27",
-    "published":  "2026-09-04T01:37:00Z",
+    "version":  "0.7.28",
+    "published":  "2026-09-04T02:35:26Z",
     "critical":  false,
-    "sha256":  "901d295f26b4cc1d0ec73c3ff10c1f78601074b650267b687bb7aea15c47e66f",
-    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.27/VaultCove-0.7.27-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
+    "sha256":  "4bfebb5be9487ba34fd1371316794371911ffd4c7f5d95f71eea937d003f7986",
+    "downloadUrl":  "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.28/VaultCove-0.7.28-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
     "notesUrl":  "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
     "summary":  "Seven-day full-feature trial, clear uninstall data-loss disclosure, offline vault protection, and a self-contained full-source two-repository publisher.",
     "schemaVersion":  3,
     "signatureAlgorithm":  "ECDSA-P256-SHA256",
-    "signature":  "uu48MKpLHp5qREKPjGgPj0XFFXT48t69Lucvjb_vApg_AdlicQRmrZhARcAHp45BlJrrpC-Y4YIt5AlMKIZwcw"
+    "signature":  "xRO3SRJvpUOMHXsKgaZj_-nMhT6_giDIZ3tbjigcqy0jkxR6niNGJ3T_Up4s3Aao3EC18cl5BgczPwZdKamhRg"
 }
