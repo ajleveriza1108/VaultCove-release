@@ -1,3 +1,14 @@
+# VaultCove 0.7.44 R1
+
+- Changes the VaultCove **master password minimum from 16 characters to 12 characters**.
+- Retains every strong-master-password rule: lowercase, capital letter, number, special character, no 3 repeated characters, no common word/sequence, at least 8 unique characters, and confirmation match.
+- Applies the 12-character minimum consistently to popup first-vault creation, full-page first-run creation, and **Change master password**.
+- Keeps ordinary saved-login password health separate; this change is specifically for the VaultCove master password.
+- Scrutinizes and improves startup typography, spacing, control height, helper text, security cards, acknowledgement text, and CTA readability.
+- Fixes the previous low-height desktop rule that made fonts unnecessarily tiny on common displays around 720–760px tall.
+- Preserves the wide one-window startup layout, always-available `.vcvault`/password-manager imports, automatic duplicate-aware merge, dashboard setup gate, anchored 7-day trial, licensing, and seven-device management.
+- No Apps Script redeployment is required.
+
 # VaultCove 0.7.43 R1
 
 - Keeps **Restore .vcvault** and **Import password-manager backup** active after the master-password vault has already been created.
