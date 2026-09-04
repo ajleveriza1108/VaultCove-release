@@ -1,3 +1,13 @@
+# VaultCove 0.7.41 R1
+
+- Blocks Open dashboard while VaultCove is still in master-password setup state.
+- Fixes the startup width regression caused by the stronger legacy `html.vaultLocked .gateCard` 470px rule.
+- Forces the unified startup to a real rectangular desktop window up to 1320px wide.
+- Spreads Profile/Import, Master Password, and Security Essentials across three balanced columns.
+- Preserves name, profile-photo crop, .vcvault restore, automatic password-manager import, password requirements, security email, auto-lock, Authenticator, backup reminder, secure defaults, both acknowledgements, and Finish security setup in one window.
+- Preserves the anchored 7-day trial and licensing/recovery behavior.
+- No Apps Script redeployment is required.
+
 # VaultCove 0.7.40 R1
 
 - Replaces the two-screen first-run flow with one rectangular startup window.

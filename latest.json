@@ -1,14 +1,14 @@
 {
   "product": "VaultCove",
   "channel": "dev",
-  "version": "0.7.40",
-  "published": "2026-09-04T12:49:26Z",
+  "version": "0.7.41",
+  "published": "2026-09-04T13:03:47Z",
   "critical": false,
-  "sha256": "5e1d12bd304f0fef11983fd9328444f38b2cc478dbf2391800f1a352eb1b21bd",
-  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.40/VaultCove-0.7.40-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
+  "sha256": "b8836c66538c12dcc968a346d14c92ab7b39bf232b14660002249d9cf84243f5",
+  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.41/VaultCove-0.7.41-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
   "notesUrl": "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
   "summary": "Unified .vcvault recovery, startup restore/import, automatic password-manager detection, profile-crop fix, responsive backup preview, production licensing, and full-source two-repository publisher.",
   "schemaVersion": 3,
   "signatureAlgorithm": "ECDSA-P256-SHA256",
-  "signature": "rfL7ILSxiy7PfJJ3kRtcJ3du8vR4nY7NT0oePh7SaedFMqS3q9Vjvawa7GIzDl3g6r1B_s5N6ZXmFDcoAH_ZAQ"
+  "signature": "QOgP5CyJ5pxugx-phPPQhi1ZwMyfS2B_9Wd2FcrtW7RpUZCwccjUJr9HcAPpZNYj-PeRSB3xy8ItKVuvq1KEHA"
 }
