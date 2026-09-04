@@ -2,7 +2,7 @@
   "product": "VaultCove",
   "channel": "dev",
   "version": "0.7.32",
-  "published": "2026-09-04T07:44:06Z",
+  "published": "2026-09-04T07:49:01Z",
   "critical": false,
   "sha256": "b34be673136f0444b8809ddec88e6a199c29a15433bbc16543083c46f1aac793",
   "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.32/VaultCove-0.7.32-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
@@ -10,5 +10,5 @@
   "summary": "Production Payhip + Apps Script licensing, seven-day full trial, Lifetime/no-annual-subscription model, seven-device ledger, resilient encrypted backups, and full-source two-repository publisher.",
   "schemaVersion": 3,
   "signatureAlgorithm": "ECDSA-P256-SHA256",
-  "signature": "0zCWpFrCzsmqQgvB6elFM5CsU2I4XitN9kjg1EzGZL-DNNuUA1nKReIuEWNpRht4a5_wCg3SOPGH-a3tT7HHew"
+  "signature": "dCRrVsqpGNrcKdpV_JGyKhmYNC15rZCN4Sf17vUgczvXOFSwIFE2rPAs8vV-ME_ctIiyuFejznUnsO5M13VZtw"
 }

@@ -11,11 +11,11 @@
     },
     {
       "name": "VaultCove-0.7.32-R1-DEV.zip",
-      "sha256": "f679f89ba445b8969c897514773aa7885564f35793eb031496f5d782b009eed0"
+      "sha256": "691cd16ed8c3757e1e316bf828989445960c2ae82c09d6f8841c0ca48dffdeef"
     },
     {
       "name": "VaultCove-0.7.32-R1-STORE-PREFLIGHT.zip",
-      "sha256": "cfa7d5b9be831d1676819743e0dbcb9553043977fbcba52a381511d89599fe17"
+      "sha256": "f0257c0eed1207fa17dacf9b737b69c2490e75afe29c9951d1ec5343cb9ca245"
     }
   ]
 }
