@@ -1,3 +1,12 @@
+# VaultCove 0.7.42 R1
+
+- After the encrypted vault/master password has been successfully created or restored, the redundant **Master password** column is removed from the remaining first-run setup.
+- The same rectangular startup window remains open and automatically redistributes **Profile & existing passwords** and **Security essentials** into two balanced columns.
+- The redundant **Encrypted vault is ready** status line is hidden after vault creation.
+- The dashboard remains blocked until setup is complete.
+- Preserves name/profile-photo setup, `.vcvault` restore, automatic password-manager import detection, security email, auto-lock, Authenticator, backup reminder, secure defaults, both acknowledgements, anchored 7-day trial, licensing, and seven-device management.
+- No Apps Script redeployment is required.
+
 # VaultCove 0.7.41 R1
 
 - Blocks Open dashboard while VaultCove is still in master-password setup state.
