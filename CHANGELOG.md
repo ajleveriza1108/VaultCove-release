@@ -1,3 +1,13 @@
+# VaultCove 0.7.60 R1
+
+- Fixes the remaining first-run/lock race: **Finish Setup now commits the permanent setup-complete marker and all validated startup settings atomically before optional import/merge work can be interrupted by auto-lock.**
+- Adds `completeFirstRunSetup()` as the single durable transaction for setup completion; the marker and settings can no longer be split across two writes.
+- Repairs installations left in the old partial-commit state where the encrypted vault exists and `firstRunSecurityComplete` is already true but the permanent setup marker is still false. Those installations are promoted automatically and route to the Master password screen after lock.
+- Explicitly refreshes the idle session at the start of Finish Setup. If the session has already expired, VaultCove routes to the Master password gate instead of continuing setup work against a dead session.
+- Once validated Finish Setup is durably committed, later optional startup import/merge failure or auto-lock cannot reopen onboarding. The user unlocks with the existing master password and returns to the normal dashboard.
+- Reapplies the user's startup profile/security choices after any optional backup merge so imported portable settings cannot override the choices made in the current setup window.
+- Preserves 0.7.59 Premium boundaries, Free Login-only `.vcvault` backups, Warm Ivory default theme, distinct backup verification action, encrypted vault mirror, exact inactivity auto-lock, local search, Share workspace, and full-source publishing.
+
 # VaultCove 0.7.59 R1
 
 - Makes the startup `.vcvault` **Verify for merge** action permanently visually distinct from Cancel and other secondary controls across every theme, including Warm Ivory.
