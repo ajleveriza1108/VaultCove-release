@@ -1,3 +1,19 @@
+# VaultCove 0.7.63 R1
+
+- Removes the **Always-On Handler** permission/status banner from the extension-icon popup. Website-handler configuration remains in Settings; the compact popup focuses only on vault unlock, search, trusted-site matches, Secure Login, and adding a login.
+- Adds a live encrypted-vault change notification path from the dashboard to the background worker. Adding, editing, merging, or importing login credentials now refreshes already-open VaultCove website handlers immediately.
+- Open webpages no longer need to be refreshed before newly added/imported matching logins are recognized. Existing Strict Secure Login hostname matching and encrypted-at-rest storage remain unchanged.
+
+# VaultCove 0.7.62 R1
+
+- Improves **Warm Ivory readability across the extension and dashboard** by raising muted-text, placeholder, disabled-control, Premium locked-card, migration-preview, helper-text, warning/error, and secondary-label contrast while preserving the Warm Ivory palette.
+- Replaces visible dialog-header **Close** text buttons with compact accessible **X** buttons; `aria-label="Close"` remains for screen readers.
+- Renames Migration Center **Supported today** to **Supports the following Password Managers**.
+- Hardens **Identities** as a protected view: entering Identities requires a fresh master-password Sensitive Access verification, direct URL navigation cannot bypass the gate, and the view automatically closes when Sensitive Access expires.
+- Identity records are excluded from the generic All-vault/global-search results and Dashboard Recent Activity so names/email metadata are not exposed outside the authenticated Identities view.
+- Existing Identity details continue to live only inside the encrypted VaultCove envelope; opening/editing an Identity remains protected by Sensitive Access.
+- Preserves 0.7.61 hard Master-password lock routing, 0.7.60 durable setup completion, 0.7.59 Premium/Free backup boundaries, secure sharing, local-only search, Warm Ivory default, licensing, and full-source publishing.
+
 # VaultCove 0.7.61 R1
 
 - Fixes the remaining **lock-screen race** directly at the UI-routing layer. A normal Lock or idle auto-lock now establishes a hard `locked` UI state before any later asynchronous setup/import callback can render.
