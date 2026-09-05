@@ -1,3 +1,18 @@
+# VaultCove 0.7.94 R1
+
+- Fixed the publisher post-install regression check to recognize backup snapshot v4 instead of the obsolete v3 marker.
+- Hardened the OTP email Copy code action so the clipboard icon is always a real HTTPS action and never silently degrades to a decorative icon.
+- Added guarded Apps Script Web App URL fallback support through `VC_WEB_APP_URL`.
+- Improved the helper-page legacy clipboard fallback while keeping OTPs as continuous six-digit strings such as `123456`.
+
+## 0.7.93 R1 — Login Nicknames + Complete Backup Refresh + Functional Email Copy
+
+- Adds an optional login name/nickname for every owned login in Free Forever and Premium, making multiple accounts on the same website or IP easy to distinguish.
+- Nicknames participate in Vault search, folder organization, popup account matching, sharing selection and normal vault display without changing secure site matching.
+- Advances `.vcvault` component backup schema to v4; login nicknames round-trip in Free Login-only backups and Premium complete backups. Premium complete backup continues to preserve all current local settings, sharing history, encrypted activity history, recipients and recovery material.
+- Replaces the decorative email Copy code icon with a real short-lived HTTPS Apps Script copy helper. The email itself remains script-free; the OTP never appears in the helper URL.
+- Preserves all 0.7.89 guarded HTTP behavior and later security/email hardening.
+
 ## 0.7.92 R1 — Verification Email Copy/Paste Polish
 
 - Verification codes now render as one continuous six-digit string such as `123456` instead of `123 456`, making direct copy/paste reliable.
