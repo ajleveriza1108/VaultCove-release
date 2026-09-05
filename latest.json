@@ -1,14 +1,14 @@
 {
   "product": "VaultCove",
   "channel": "dev",
-  "version": "0.7.58",
-  "published": "2026-09-05T01:27:27Z",
+  "version": "0.7.59",
+  "published": "2026-09-05T02:03:28Z",
   "critical": false,
-  "sha256": "827a15be1477ffb2bb608a8c981346f9929c87460e68dca63046b53077572db5",
-  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.58/VaultCove-0.7.58-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
+  "sha256": "5b344bc81c9e0c0ce3394092c260e6f1a140064de3b61f4c5a3cb9fb2176f15e",
+  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.59/VaultCove-0.7.59-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
   "notesUrl": "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
-  "summary": "Post-lock Master-password routing, redundant encrypted vault-envelope persistence and self-healing, preserved idle auto-lock, search, Share, Free Forever, Premium Lifetime, backups, licensing, and full-source publishing.",
+  "summary": "Premium feature boundary, Free Login-only backups, Warm Ivory default theme, distinct startup backup verification, preserved post-lock routing, search, Share, licensing, and full-source publishing.",
   "schemaVersion": 3,
   "signatureAlgorithm": "ECDSA-P256-SHA256",
-  "signature": "jkoqE6uB3lSI5nRr9Ubf4pOPCG33gIG3brUFEKM60bfgV5DQrjDHdyLe2kaM4oHHhfFnAXT-NSzdsuK0o55RZA"
+  "signature": "nXooiM723oLvgWxjZeZOB7PfzDWUMiXiraU1EVoDErwc5fwOVtoNzz9eiCK6Q06473g_-GrYDTWOOpbE0hSElg"
 }

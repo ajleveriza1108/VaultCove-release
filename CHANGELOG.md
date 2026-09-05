@@ -1,3 +1,14 @@
+# VaultCove 0.7.59 R1
+
+- Makes the startup `.vcvault` **Verify for merge** action permanently visually distinct from Cancel and other secondary controls across every theme, including Warm Ivory.
+- Moves **Cards, Secure Notes, TOTP Codes, Favorites, Security Center, and encrypted `.vckey` to TXT conversion** into Premium Lifetime. Free Forever keeps login credentials, bank accounts, identities, password generator, import/restore, Secure Login, email sharing up to five recipients, settings, and the local encrypted vault.
+- Premium gates are enforced at navigation, item-open/edit, item-save, Favorites mutation, Security Center entry, TOTP field editing/generation, card/note creation, and `.vckey` plaintext-conversion actions. Premium data already stored locally is never deleted if Premium becomes inactive; it remains encrypted and becomes accessible again after Premium is restored.
+- Free Forever encrypted `.vcvault` creation is now **Login credentials only**. All other backup component selectors remain visible but disabled with Premium labeling. Runtime export enforcement also forces Login-only selection even if the page DOM is modified.
+- Free `.vcvault` files no longer include private sharing identity, trusted-share recovery history, VaultCove authenticator configuration, device-recovery token, folders, cards, banks, identities, notes, TOTP overlays, Trash, Favorites, or portable settings. Premium Lifetime keeps the full selectable backup model and unified recovery material.
+- Changes the default VaultCove appearance for new/unconfigured installations to **Warm Ivory**. Existing users keep their explicitly saved theme. Invalid/missing theme values now normalize to Warm Ivory.
+- Updates the Premium catalog and Free/Premium disclosure text to match the new feature boundary.
+- Preserves 0.7.58 post-lock Master-password routing, permanent setup state, redundant encrypted vault-envelope mirror, exact inactivity auto-lock, full local search, Share workspace, and full-source publishing.
+
 # VaultCove 0.7.58 R1
 
 - Fixes the critical post-lock routing bug: once a real VaultCove vault has been created, normal Lock, inactivity auto-lock, Chrome restart, and dashboard reopen must route to the existing-vault **Master password** unlock gate instead of the first-run **Set up VaultCove** screen.
