@@ -1,3 +1,13 @@
+# VaultCove 0.7.57 R1
+
+- Fixes popup credential search so typing the third and later characters of a saved email/username continues matching correctly. The search is now performed locally in the background against the full decrypted in-memory username/email while the popup still receives only the existing masked public summary.
+- `GET_ACTIVE_TAB_LOGINS` now accepts a bounded local `query`, uses the same full credential search logic as the website handler, and never exposes the full username/password to the popup.
+- Removes popup filtering against `usernameMasked`, which was the exact two-character regression: masked email summaries intentionally reveal only the first two local-part characters, so a third typed character could never match.
+- Keeps Strict Secure Login site-bound: popup search only filters credentials already trusted for the current HTTPS site; unrelated credentials are not offered.
+- Reasserts dashboard search against full local username/email, website URL, tags, cardholder and bank fields while excluding passwords and TOTP secrets from the search haystack.
+- Hardens dashboard summary-card icon geometry so every icon container and SVG glyph is centered horizontally and vertically inside its own box across themes and compact mode.
+- Preserves 0.7.56 exact idle auto-lock, permanent setup completion, Share workspace, Free Forever, Premium Lifetime, encrypted backups, TOTP, Secure Login, and all existing vault data.
+
 # VaultCove 0.7.56 R1
 
 - Fixes **idle auto-lock** so the dashboard locks according to the configured inactivity timer even when the dashboard tab remains open or Chrome throttles the page timer.
