@@ -1,3 +1,15 @@
+# VaultCove 0.7.64 R1
+
+- Changes the private owner-admin `VCA-...` entitlement from seven devices to **unlimited devices**. Standard Payhip Premium remains capped at seven devices.
+- Uses `licenseType=admin`/`source=admin` as the authoritative unlimited policy, so an already-provisioned owner-admin row becomes unlimited immediately after the updated Apps Script is deployed; no new admin key is required.
+- Uses signed/API `maxDevices: 0` only as the owner-admin unlimited sentinel while retaining the protocol-v3 signed lease shape.
+- Prevents owner-admin activation and restore flows from entering seven-slot/reclaim logic. Existing active/retained admin devices never block activation of another admin device.
+- Keeps every admin device in the server ledger so **Licensed devices** can show all installations and the owner can Release or Revoke unfamiliar devices after the existing email-verification management gate.
+- Adds editor-only Apps Script owner controls: `vcAdminListOwnerDevices()`, plus Release/Revoke/Restore wrappers using temporary `VC_ADMIN_TARGET_DEVICE_ID`; these helpers are not exposed through the public web-app `doPost()` API.
+- `vcInitializeLicenseSheets()` now normalizes existing admin-license `maxDevices` cells to the `0` unlimited sentinel for clear Sheet state while standard licenses remain `7`.
+- Updates License & Devices UI to display **Owner-admin - unlimited devices** and actual active/retained counts instead of `x of 7`.
+- Preserves 0.7.63 live website login refresh, compact popup, 0.7.62 Identity protection/readability, 0.7.61 hard Master-password lock routing, Free Forever boundaries, encryption, and full-source publishing.
+
 # VaultCove 0.7.63 R1
 
 - Removes the **Always-On Handler** permission/status banner from the extension-icon popup. Website-handler configuration remains in Settings; the compact popup focuses only on vault unlock, search, trusted-site matches, Secure Login, and adding a login.
