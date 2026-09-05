@@ -1,4 +1,12 @@
-# VaultCove 0.7.64 R1
+# VaultCove 0.7.65 R1
+
+- Premium account header updates live without page refresh.
+- Licensed Devices refreshes immediately after Premium activation/lease changes.
+- Background metadata-only security-email notices now cover password changes and protected Cards, Bank Accounts, Identities, and Secure Notes changes.
+- Cards, Bank Accounts, Identities, and Secure Notes require master-password authorization on a fixed five-minute protected-category window.
+- Universal theme readability/contrast pass.
+
+# VaultCove 0.7.65 R1
 
 - Changes the private owner-admin `VCA-...` entitlement from seven devices to **unlimited devices**. Standard Payhip Premium remains capped at seven devices.
 - Uses `licenseType=admin`/`source=admin` as the authoritative unlimited policy, so an already-provisioned owner-admin row becomes unlimited immediately after the updated Apps Script is deployed; no new admin key is required.
