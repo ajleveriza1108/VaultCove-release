@@ -1,3 +1,11 @@
+# VaultCove 0.7.79 R1
+
+- Redesigned first-run setup into a true phased single-window desktop layout with no internal setup-card scrollbars on normal desktop/laptop viewports.
+- Before vault creation the three columns are Profile/Import, Master Password, and Security. After vault creation the Master Password column is removed and Premium License takes the third column.
+- Kept acknowledgements and Finish Setup permanently visible in the bottom action area.
+- Restore/import expansion collapses redundant startup action cards to preserve the one-window layout.
+- Added a release-boundary gate for the desktop single-window startup contract.
+
 # VaultCove 0.7.78 R1
 
 - Fixed startup crash caused by a stale `listLicensedDevices` named import that was not exported by `core/license-service.js`.
