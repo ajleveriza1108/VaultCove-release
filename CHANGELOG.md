@@ -1,3 +1,15 @@
+# VaultCove 0.7.56 R1
+
+- Fixes **idle auto-lock** so the dashboard locks according to the configured inactivity timer even when the dashboard tab remains open or Chrome throttles the page timer.
+- Auto-lock is now scheduled as an exact one-shot Chrome alarm whenever the vault is unlocked or real user activity refreshes the session.
+- Expired sessions can no longer be resurrected by a late mouse/keyboard event: `touchSession()` refuses to extend a session whose deadline already passed.
+- Dashboard activity now recognizes pointer, keyboard, wheel, scroll, touch, focus, and visibility-return activity while remaining throttled to avoid unnecessary writes.
+- Adds a permanent local **setup-complete marker** stored outside the portable backup settings. Once Finish Setup succeeds, normal vault locking/unlocking can never send that installation back through first-run setup.
+- Existing installations with a completed setup are migrated automatically to the permanent local marker.
+- `.vcvault` restore/import no longer carries `firstRunSecurityComplete`, so restoring a backup cannot reset this device's onboarding status.
+- Once setup is complete, attempts to write `firstRunSecurityComplete:false` are normalized back to complete; the marker disappears only when Chrome removes the extension's local storage.
+- Preserves VaultCove 0.7.55 Share workspace, email-recipient sharing, Free Forever, Premium Lifetime, seven-device licensing, encrypted backups, TOTP, Secure Login, and all existing vault data.
+
 # VaultCove 0.7.55 R1
 
 - Rebuilds VaultCove as the normal self-contained **FULL-SOURCE UPDATE + TEST + BUILD + TWO-REPO PUBLISHER**.

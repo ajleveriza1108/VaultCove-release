@@ -1,14 +1,14 @@
 {
   "product": "VaultCove",
   "channel": "dev",
-  "version": "0.7.55",
-  "published": "2026-09-05T00:15:21Z",
+  "version": "0.7.56",
+  "published": "2026-09-05T00:39:25Z",
   "critical": false,
-  "sha256": "5084fff465846e239cc3df90ed6e8b9629cd727b7b109de6fc796a44f526d9c7",
-  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.55/VaultCove-0.7.55-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
+  "sha256": "3dea3f40f5666cdad0fc1e184951a4062de5b74788f5620e59e41c86244e172f",
+  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.56/VaultCove-0.7.56-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
   "notesUrl": "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
-  "summary": "Free Forever core vault access, optional Premium Lifetime advanced security and secure sharing, preserved .vcvault recovery, startup import, licensing, and full-source publishing.",
+  "summary": "Idle auto-lock enforcement, permanent local setup completion, Free Forever core vault access, optional Premium Lifetime, preserved .vcvault recovery, sharing, licensing, and full-source publishing.",
   "schemaVersion": 3,
   "signatureAlgorithm": "ECDSA-P256-SHA256",
-  "signature": "cP5x43f4jJSaFlk1eg2plOlSxh0tuJ1uLQdtSrDElviZl0yIQyWhV73lB0Pi38zEr4YZlZQpB79got4MLfIBPA"
+  "signature": "EvY59QmZClCtoGUsjF-pL4wmxjl26iaCHLoYsAc4dOFN4OS8KtTp7SgSyBqW7n6ATqUc4fZoIK5lTYUh_TRlxQ"
 }
