@@ -1,14 +1,14 @@
 {
   "product": "VaultCove",
   "channel": "dev",
-  "version": "0.7.60",
-  "published": "2026-09-05T02:30:33Z",
+  "version": "0.7.61",
+  "published": "2026-09-05T02:40:00Z",
   "critical": false,
-  "sha256": "27130c3db0e8af3a7690aebcdaabc2d8cdc43956127c6f07711908b570f3f528",
-  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.60/VaultCove-0.7.60-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
+  "sha256": "209fa1d1e79aa6a40513f8bd299719704ccb95416c55d7b52882c62eb8fccd6b",
+  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.61/VaultCove-0.7.61-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
   "notesUrl": "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
   "summary": "Atomic Finish Setup durability and partial-commit recovery so auto-lock always returns established vaults to Master password; preserves Premium boundaries, Free Login-only backups, Warm Ivory, search, Share, licensing, and full-source publishing.",
   "schemaVersion": 3,
   "signatureAlgorithm": "ECDSA-P256-SHA256",
-  "signature": "-s6VsFUvh5jKfRlm0oDJjeEze0GTEcaN_FehNA16Gupp3y4oBYudUCws4ki1kdU_Pu00Fgor1VlL58js48Xbag"
+  "signature": "eD70ap0306lBtu1f76yeKcbpMMhKo14GzdzV38ZttBfxfustc9BYAnSgSIwZpQFsSbfs_W4dA9Bex5pE_EAdHg"
 }

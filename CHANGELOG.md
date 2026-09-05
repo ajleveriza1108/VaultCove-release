@@ -1,3 +1,13 @@
+# VaultCove 0.7.61 R1
+
+- Fixes the remaining **lock-screen race** directly at the UI-routing layer. A normal Lock or idle auto-lock now establishes a hard `locked` UI state before any later asynchronous setup/import callback can render.
+- Adds a central `enterLockedUi()` path used by both manual Lock and inactivity auto-lock. It clears decrypted UI, invalidates older UI transitions, and always selects the existing-vault **Master password** gate.
+- Adds `uiRouteEpoch` transition invalidation so asynchronous first-run creation/Finish Setup work that started before a lock cannot repaint **Set up VaultCove** or **Finish setting up VaultCove** after the session has expired.
+- Adds a pure `resolveVaultGatePanel()` routing invariant: an established vault without an active decrypted session resolves `setupPanel` to `unlockPanel`.
+- Adds a CSS defense-in-depth rule that makes `#setupPanel` impossible to display while the dashboard session state is `locked`, even if stale code toggles the setup panel's classes.
+- Fresh installations with no encrypted vault still use the normal setup wizard. An unfinished setup can still resume **after the user first enters the existing master password**; the locked state itself never shows onboarding.
+- Preserves 0.7.60 atomic Finish Setup, 0.7.59 Premium boundaries/Free Login-only backups/Warm Ivory default, and all existing encrypted vault data.
+
 # VaultCove 0.7.60 R1
 
 - Fixes the remaining first-run/lock race: **Finish Setup now commits the permanent setup-complete marker and all validated startup settings atomically before optional import/merge work can be interrupted by auto-lock.**
