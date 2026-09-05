@@ -1,11 +1,20 @@
-# VaultCove 0.7.86 R1
+# VaultCove 0.7.87 R1
+
+- Dashboard Recent Activity now uses the real encrypted, tamper-evident activity chain instead of item updatedAt timestamps.
+- Records meaningful local actions such as Card viewed, Password used for login, Login changed, Password changed, and protected-record changes.
+- Protected record view events are recorded only after successful Master Password authorization.
+- Activity metadata is privacy-safe and cannot accept password/card/account/secret detail keys.
+- Premium Advanced Security Center retains the longer encrypted activity history; Dashboard shows a concise recent feed.
+- Preserves the accepted 0.7.86 startup, GUI, Payhip purchase flow, license compatibility, sharing, backup, and security behavior.
+
+# VaultCove 0.7.87 R1
 
 - Fixed Premium/admin activation after correct email OTP when the deployed Apps Script still signs the pre-management protocol-3 lease shape.
 - Current lease verification remains strict; legacy canonical verification is allowed only when managementRole/managerLimit are both absent.
 - Apps Script now advertises lease canonical version 2 outside the signed payload.
 - Preserves the accepted 0.7.85 startup, GUI containment, Payhip purchase, licensing, sharing, backup, and security behavior.
 
-## 0.7.86 R1
+## 0.7.87 R1
 - Adds a theme-matched Buy Premium Lifetime action to startup and License & Devices using the official Payhip product https://payhip.com/b/0foVO.
 - Keeps Chrome Web Store CSP safe by using a direct HTTPS purchase link instead of remote Payhip JavaScript.
 - Permanently contains Premium/Maintenance navigation badges so labels no longer clip or create horizontal overflow.
