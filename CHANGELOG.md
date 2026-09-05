@@ -1,3 +1,14 @@
+# VaultCove 0.7.68 R1
+
+- Adds an inline VaultCove **Save this login?** prompt when a submitted website credential is confirmed as not already saved.
+- The prompt stays fully visible for at least 7 seconds, then fades out if the user does not respond.
+- Save promotes the candidate directly into the encrypted local vault when unlocked; if locked, Save opens the guarded unlock flow and completes the requested save after successful unlock.
+- **Not now** and automatic timeout discard the pending candidate instead of silently adding it.
+- Prompt state is bound to the originating browser tab so normal post-login navigation can replay the prompt on the destination page without losing the captured candidate.
+- The prompt never renders the submitted password or other sensitive credential contents.
+- Removes the redundant Chrome OS notification for normal new-login capture; the in-page VaultCove prompt is the primary interaction.
+- Preserves the permanent Chrome Web Store ID `dpbmpmnibbpimedfmanoabihipdfdfko` and the 132-character manifest-description gate.
+
 # VaultCove 0.7.67 R1
 
 - Permanently pins the official Chrome Web Store item ID to `dpbmpmnibbpimedfmanoabihipdfdfko` in the release contract.
