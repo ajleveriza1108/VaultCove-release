@@ -1,3 +1,10 @@
+## 0.7.85 R1
+- Adds a theme-matched Buy Premium Lifetime action to startup and License & Devices using the official Payhip product https://payhip.com/b/0foVO.
+- Keeps Chrome Web Store CSP safe by using a direct HTTPS purchase link instead of remote Payhip JavaScript.
+- Permanently contains Premium/Maintenance navigation badges so labels no longer clip or create horizontal overflow.
+- Improves unlocked dashboard/sidebar typography without changing the established dashboard grids or startup layout.
+- Keeps startup rules isolated from the main application shell.
+
 ## 0.7.84 R1
 - Restores the accepted 0.7.82 main VaultCove dashboard/sidebar GUI after the rejected 0.7.83 global visual redesign.
 - Keeps the compact, readable, single-window first-run setup introduced before the dashboard regression.
