@@ -1,3 +1,14 @@
+# VaultCove 0.7.58 R1
+
+- Fixes the critical post-lock routing bug: once a real VaultCove vault has been created, normal Lock, inactivity auto-lock, Chrome restart, and dashboard reopen must route to the existing-vault **Master password** unlock gate instead of the first-run **Set up VaultCove** screen.
+- Adds a redundant encrypted local vault-envelope mirror. Every legitimate encrypted-envelope write now updates the primary and mirror atomically; if the primary key is unexpectedly absent while the mirror remains, VaultCove restores the primary automatically before deciding whether setup is required.
+- A completed-installation marker can no longer be converted back into first-run setup by a stray initialize/setup request. `beginFirstRunSetup()` now refuses to run when an encrypted vault already exists or setup was already completed.
+- `initializeVault()` also refuses to create a replacement vault when the permanent completed-installation marker already exists, preventing an accidental setup path from overwriting an established installation.
+- `markFirstRunSetupComplete()` now verifies that a real encrypted vault exists before committing the permanent setup-complete marker.
+- If the permanent setup-complete marker exists but both encrypted envelope copies are unexpectedly unavailable, VaultCove still classifies the installation as **locked**, never as first-run. This prevents the startup wizard from appearing after a lock and surfaces the problem through the master-password path instead of offering destructive re-setup.
+- Extends the session/setup regression suite with lock-routing, encrypted-envelope persistence, mirror self-healing, and completed-installation no-restart checks.
+- Preserves 0.7.57 full local email/username search, centered dashboard summary icons, exact inactivity auto-lock, Share workspace, Free Forever, Premium Lifetime, backups, TOTP, Secure Login, and existing encrypted vault data.
+
 # VaultCove 0.7.57 R1
 
 - Fixes popup credential search so typing the third and later characters of a saved email/username continues matching correctly. The search is now performed locally in the background against the full decrypted in-memory username/email while the popup still receives only the existing masked public summary.

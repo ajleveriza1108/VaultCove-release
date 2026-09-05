@@ -1,14 +1,14 @@
 {
   "product": "VaultCove",
   "channel": "dev",
-  "version": "0.7.57",
-  "published": "2026-09-05T00:52:13Z",
+  "version": "0.7.58",
+  "published": "2026-09-05T01:27:27Z",
   "critical": false,
-  "sha256": "75aeaa0cb38f508e21e8ffc61e417304a213909617167ffd4d1c19c936187c3b",
-  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.57/VaultCove-0.7.57-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
+  "sha256": "827a15be1477ffb2bb608a8c981346f9929c87460e68dca63046b53077572db5",
+  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.58/VaultCove-0.7.58-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
   "notesUrl": "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
-  "summary": "Full local username/email search beyond masked popup text, centered dashboard summary icons, preserved idle auto-lock/setup persistence, Free Forever, Premium Lifetime, sharing, backups, licensing, and full-source publishing.",
+  "summary": "Post-lock Master-password routing, redundant encrypted vault-envelope persistence and self-healing, preserved idle auto-lock, search, Share, Free Forever, Premium Lifetime, backups, licensing, and full-source publishing.",
   "schemaVersion": 3,
   "signatureAlgorithm": "ECDSA-P256-SHA256",
-  "signature": "6qpx5Rgx72Md_325Z4CdK0ph3i0ZAHKThVFiSd4DpG8SatS0D9wU7CjTEu6EQzBNJ32jHvjsdcox-SKwLsuQbA"
+  "signature": "jkoqE6uB3lSI5nRr9Ubf4pOPCG33gIG3brUFEKM60bfgV5DQrjDHdyLe2kaM4oHHhfFnAXT-NSzdsuK0o55RZA"
 }
