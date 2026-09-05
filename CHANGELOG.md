@@ -1,4 +1,11 @@
-## 0.7.85 R1
+# VaultCove 0.7.86 R1
+
+- Fixed Premium/admin activation after correct email OTP when the deployed Apps Script still signs the pre-management protocol-3 lease shape.
+- Current lease verification remains strict; legacy canonical verification is allowed only when managementRole/managerLimit are both absent.
+- Apps Script now advertises lease canonical version 2 outside the signed payload.
+- Preserves the accepted 0.7.85 startup, GUI containment, Payhip purchase, licensing, sharing, backup, and security behavior.
+
+## 0.7.86 R1
 - Adds a theme-matched Buy Premium Lifetime action to startup and License & Devices using the official Payhip product https://payhip.com/b/0foVO.
 - Keeps Chrome Web Store CSP safe by using a direct HTTPS purchase link instead of remote Payhip JavaScript.
 - Permanently contains Premium/Maintenance navigation badges so labels no longer clip or create horizontal overflow.
