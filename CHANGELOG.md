@@ -1,4 +1,16 @@
-# VaultCove 0.7.54 R1
+# VaultCove 0.7.55 R1
+
+- Rebuilds VaultCove as the normal self-contained **FULL-SOURCE UPDATE + TEST + BUILD + TWO-REPO PUBLISHER**.
+- Replaces the technical Shared screen with a simple **Share** workspace containing **Email Recipients**, **Share Passwords**, **Shared Passwords**, and **Convert encrypted .vckey to TXT**.
+- Email recipients are stored inside the encrypted local vault and can be added, edited, or removed. Free Forever supports up to 5 saved recipients; Premium Lifetime removes that limit.
+- Removes personal sample names from recipient forms.
+- Removes the user-facing recipient `.vckey` exchange and Sharing Identity ceremony from normal password sharing. Legacy `.vckey` support remains only for the separate encrypted `.vckey` to TXT conversion and older compatibility paths.
+- New `.vcshare` v4 files are bound to the intended recipient email without storing the readable recipient email in the package. Import requires the exact assigned email plus the recipient's own local VaultCove master-password authorization.
+- Keeps received credentials sealed locally as immutable Secure-Login-only Shared Keys.
+- Cleans up Premium Lifetime card sizing and wording; Secure Sharing itself is Free Forever while Premium provides unlimited saved recipients.
+- Preserves the 12-character strong master password, Free Forever core vault, Premium Lifetime entitlement, seven-device Premium licensing, startup import/merge, encrypted backups, Authenticator protection, and existing legacy share import compatibility.
+
+# VaultCove 0.7.53 R1
 
 - Reworks **Security Health** so weak passwords explicitly count as risk.
 - Adds a unique **At-risk credentials** count: a login that is both weak and reused is counted once in the at-risk total, while both risk findings remain visible.
