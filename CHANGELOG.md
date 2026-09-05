@@ -1,3 +1,19 @@
+# VaultCove 0.7.73 R1
+
+- Hardened the website handler against stale Chrome extension contexts after extension reload/update.
+- Runtime messaging failures are contained and returned to callers instead of surfacing as unhandled chrome://extensions errors.
+- Replaced the old boolean-only content-handler singleton with a versioned build guard so a newly injected release is not blocked by an older handler flag.
+- Removed the async Open VaultCove event-listener throw path.
+- Added a permanent release gate requiring `src/content/handler.js` to begin directly with its executable IIFE; copied source-viewer line-number gutters or other preambles are rejected.
+- Preserves 0.7.72 current-device activation truth, durable detected-login Add, persisted-item verification, and live Vault/Dashboard refresh.
+
+# VaultCove 0.7.72 R1
+
+- Fixed License & Devices so a verified signed Premium/admin entitlement for the current installation always renders the disabled **Activated** state instead of offering a second activation.
+- Added a sealed fallback for every detected-login candidate so an explicit **Add to VaultCove** can recover safely if the pending capture was displaced before the click.
+- Missing captures are now errors and can no longer be reported as "Already saved".
+- Added live encrypted-vault propagation into already-open VaultCove dashboard/vault pages; detected-login additions appear without refreshing the extension page.
+
 # VaultCove 0.7.71 R1
 
 - License & Devices activation button now transitions live from **Verify and activate this device** to **Activating...** with a spinner, then to a disabled **Activated** state after success.
