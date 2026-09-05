@@ -1,3 +1,10 @@
+# VaultCove 0.7.71 R1
+
+- License & Devices activation button now transitions live from **Verify and activate this device** to **Activating...** with a spinner, then to a disabled **Activated** state after success.
+- Releasing the current installation now explicitly frees the backend device slot and immediately returns the UI to the enabled activation button without a page refresh.
+- Releasing the current device from the verified Licensed devices list uses the same current-device release path so local credentials and Premium UI state cannot remain stale.
+- The backend release response explicitly confirms `slotVacant: true`; the encrypted local vault is never deleted by license release.
+
 # VaultCove 0.7.70 R1
 
 - Fixed detected-login Add so an explicit Add is committed through a fresh serialized vault mutation and verified in the encrypted envelope before success is reported.
