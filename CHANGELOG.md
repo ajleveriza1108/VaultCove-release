@@ -1,11 +1,16 @@
-## 0.7.80 R1
+## 0.7.82 R1
+- Repairs the full-source publisher release identity: BAT, PS1, internal version, build root, tags, package names, and logs now all use 0.7.82.
+- Adds a publisher-package consistency gate so a BAT can never reference a missing or differently-versioned PS1.
+- Retains the 0.7.81 readable startup typography and vertical-scroll-only sidebar behavior.
+
+## 0.7.81 R1
 
 - Fixes first-run content clipping at common Windows/Chrome scaling by activating the compact layout from 1024x540 CSS pixels.
 - Shortens first-run copy and removes redundant recovery/default-security explanation cards.
 - Keeps Profile/Import, Security, and Premium in one viewport after vault creation; Master Password occupies Premium's column before vault creation.
 - Keeps acknowledgements and Finish Setup visible without internal setup scrollbars on normal desktop/laptop windows.
 
-# VaultCove 0.7.80 R1
+# VaultCove 0.7.81 R1
 
 - Redesigned first-run setup into a true phased single-window desktop layout with no internal setup-card scrollbars on normal desktop/laptop viewports.
 - Before vault creation the three columns are Profile/Import, Master Password, and Security. After vault creation the Master Password column is removed and Premium License takes the third column.
