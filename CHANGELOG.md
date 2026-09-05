@@ -1,4 +1,43 @@
-# VaultCove 0.7.87 R1
+## 0.7.91 R1 — Publisher Permission-Contract Repair
+
+- Fixes the full-source publisher Phase 5 regression that incorrectly expected persistent broad HTTP host access in the DEV package.
+- Preserves the 0.7.89 guarded HTTP-login design: explicitly saved/imported HTTP logins remain supported, visibly warned, exact-origin only, user-invoked through activeTab, never Auto-login, and never granted broad persistent HTTP access.
+- Preserves the 0.7.90 premium HTML verification/security-notice email template with inline VaultCove logo and plain-text fallback.
+- DEV runtime contract is HTTPS persistent handler only; HTTP remains temporary user-invoked activeTab.
+- Chrome Web Store package requests optional HTTPS host access only and never requests broad HTTP host permission.
+- Adds package assertions so DEV and Store permission contracts cannot drift back to the rejected broad-HTTP expectation.
+
+# Changelog
+
+## 0.7.90 R1 — Premium Transactional Email Template
+
+- Replaces plain-text license verification emails with a responsive VaultCove HTML security template matching the approved warm-ivory/navy/blue mockup.
+- Uses an inline embedded VaultCove logo (`cid:`) so verification emails do not depend on remote images or tracking pixels.
+- Keeps a complete plain-text fallback for restrictive mail clients and accessibility.
+- Uses context-aware subjects and request labels for Premium activation versus Licensed Devices management.
+- Shows a large grouped 6-digit code, device label, 10-minute expiry, single-use warning, and explicit Master Password/Backup Key safety reminder.
+- Applies the same branded email shell to background password/protected-record security notices without exposing vault secrets.
+- Preserves 0.7.89 guarded HTTP support, Master Password throttling, recent activity, GUI/startup, licensing, sharing, and backup behavior.
+
+## 0.7.89 R1 — Guarded Legacy HTTP Support + Security Hardening
+
+- Preserves explicit `http://` login URLs instead of silently upgrading them to HTTPS.
+- Marks HTTP login cards and drawers with a clear `Not secure - HTTP` warning.
+- Keeps persistent/broad website permissions HTTPS-only; HTTP handling is available only through a user-invoked `activeTab` session.
+- HTTP credentials never Auto-login and require explicit warning confirmation before password release.
+- HTTP matching is exact-origin only: no subdomain, www, trusted-family, inferred-host, or shared-credential fallback.
+- Shared use-only credentials remain blocked on HTTP.
+- HTTP login use is recorded in the encrypted activity chain as an insecure-transport event.
+
+# 0.7.89 R1 - Security Hardening
+
+- HTTPS-only website handling and optional host permission.
+- Top-frame-only isolated handler injection.
+- Persistent 5-failure / 60-second Master Password cooldown with live unlock countdown.
+- Added threat model, security-hardening roadmap, and Chrome Web Store security checklist.
+- Preserves 0.7.87 encrypted Recent Activity and accepted GUI/startup/licensing behavior.
+
+# VaultCove 0.7.89 R1
 
 - Dashboard Recent Activity now uses the real encrypted, tamper-evident activity chain instead of item updatedAt timestamps.
 - Records meaningful local actions such as Card viewed, Password used for login, Login changed, Password changed, and protected-record changes.
@@ -7,14 +46,14 @@
 - Premium Advanced Security Center retains the longer encrypted activity history; Dashboard shows a concise recent feed.
 - Preserves the accepted 0.7.86 startup, GUI, Payhip purchase flow, license compatibility, sharing, backup, and security behavior.
 
-# VaultCove 0.7.87 R1
+# VaultCove 0.7.89 R1
 
 - Fixed Premium/admin activation after correct email OTP when the deployed Apps Script still signs the pre-management protocol-3 lease shape.
 - Current lease verification remains strict; legacy canonical verification is allowed only when managementRole/managerLimit are both absent.
 - Apps Script now advertises lease canonical version 2 outside the signed payload.
 - Preserves the accepted 0.7.85 startup, GUI containment, Payhip purchase, licensing, sharing, backup, and security behavior.
 
-## 0.7.87 R1
+## 0.7.89 R1
 - Adds a theme-matched Buy Premium Lifetime action to startup and License & Devices using the official Payhip product https://payhip.com/b/0foVO.
 - Keeps Chrome Web Store CSP safe by using a direct HTTPS purchase link instead of remote Payhip JavaScript.
 - Permanently contains Premium/Maintenance navigation badges so labels no longer clip or create horizontal overflow.
