@@ -1,4 +1,10 @@
-# VaultCove 0.7.77 R1
+# VaultCove 0.7.78 R1
+
+- Fixed startup crash caused by a stale `listLicensedDevices` named import that was not exported by `core/license-service.js`.
+- Added a static local-module import/export contract gate so missing named exports fail before packaging.
+- Cards now format PANs while typing, detect common payment-card networks, show a local brand badge, and use sensible 8-19 digit handling instead of assuming every card is 16 digits.
+- Added semantic input modes/sanitizers for numeric-only fields, email, telephone, SWIFT/BIC, IBAN, expiry, routing, PIN, and card security code without incorrectly forcing alphanumeric fields such as postal codes or government IDs into numeric-only input.
+- TOTP Codes are marked Under Maintenance; existing encrypted TOTP secrets are preserved and not erased.
 
 - Startup now offers optional Premium serial/email activation and lets the user request a management-device role during first-run setup.
 - Standard Premium remains one shared key for up to 7 devices, with up to 3 active management devices; remaining active devices are regular devices. The private owner-admin entitlement remains unlimited.
