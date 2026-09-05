@@ -1,14 +1,14 @@
 {
   "product": "VaultCove",
   "channel": "dev",
-  "version": "0.7.73",
-  "published": "2026-09-05T08:21:12Z",
+  "version": "0.7.75",
+  "published": "2026-09-05T10:54:45Z",
   "critical": false,
-  "sha256": "9c74fbae77d9374d65eae495545c5501930b0dfdea13b87988c036be4bed0cf4",
-  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.73/VaultCove-0.7.73-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
+  "sha256": "76bdac6ab9d30af98affd5af7adaee9826d3c3019296d77fc6c4be1fb2b096a6",
+  "downloadUrl": "https://raw.githubusercontent.com/ajleveriza1108/VaultCove-release/main/releases/0.7.75/VaultCove-0.7.75-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
   "notesUrl": "https://github.com/ajleveriza1108/VaultCove-release/blob/main/CHANGELOG.md",
   "summary": "Owner-admin unlimited device entitlement with explicit release/revoke controls in Licensed Devices and editor-only Apps Script administration; standard Premium remains seven devices; preserves live login refresh, lock routing, encryption, sharing, and full-source publishing.",
   "schemaVersion": 3,
   "signatureAlgorithm": "ECDSA-P256-SHA256",
-  "signature": "2LPeJ0zM16029gZCUytytGJzL9yiJ_17jtY43_MkkYILIYzwi-Vo55sKsC9wCpWOdlo_Dg9XSzTku_7jroF6dw"
+  "signature": "ynoRkPUNxymnOq2Cr0JbSlp6LRAwG2JTj0tDsI29hi7qmuUPvgpp0U7fHqkroZXnt5phUH40xchUqSyENakBvw"
 }

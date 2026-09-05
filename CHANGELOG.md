@@ -1,3 +1,19 @@
+# VaultCove 0.7.75 R1
+
+- Fixed Licensed Devices discovery when the local AES-GCM-wrapped refresh token/serial cannot be reopened: an already-valid signed lease now authenticates read-only device snapshots.
+- Owner-admin licenses no longer require the redundant "Verify email to manage" step; a verified signed admin lease can Retain, Release, Revoke, or Restore devices directly.
+- Added signed-lease fallback for releasing the current device so a broken local transport credential cannot trap a license slot.
+- Licensed Devices auto-refreshes every five seconds while open, so another laptop activated with the same admin license appears without reloading the VaultCove page.
+- Preserves the 0.7.74 encrypted recipient persistence and system-wide real-time propagation fixes.
+
+# VaultCove 0.7.74 R1
+
+- Fixed Email Recipients persistence: `emailShareRecipients` is now part of the canonical encrypted vault model and can no longer be dropped by `normalizeVault()` during save.
+- Add/Edit Recipient now mutates a freshly decrypted vault, persists it, reloads it, and verifies the exact recipient before reporting success.
+- Remove Recipient now verifies the recipient is absent from the freshly reloaded encrypted vault before reporting success.
+- Added system-wide live propagation: open Dashboard/Share pages react to encrypted-vault, settings, and license changes; the extension popup refreshes live; website handlers refresh on vault or settings changes.
+- Preserves the permanent Chrome Web Store ID `dpbmpmnibbpimedfmanoabihipdfdfko` and the hard 132-character manifest-description release gate.
+
 # VaultCove 0.7.73 R1
 
 - Hardened the website handler against stale Chrome extension contexts after extension reload/update.
