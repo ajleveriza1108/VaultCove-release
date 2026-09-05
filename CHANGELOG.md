@@ -1,3 +1,11 @@
+# VaultCove 0.7.69 R1
+
+- Detected new-login **Add to VaultCove** no longer asks for a separate master-password verification.
+- When VaultCove is already unlocked, clicking Add writes the credential immediately into the encrypted local vault.
+- When the vault is locked, clicking Add records only the opaque capture ID as an accepted save; the credential remains sealed in the encrypted capture inbox and is promoted automatically after the user's next normal unlock, without an extra Add-specific master-password prompt.
+- Security Center **Save login** now saves directly in the current unlocked vault session instead of invoking Sensitive Access.
+- Preserves the 7-second minimum inline prompt, fade-on-no-response behavior, duplicate detection, permanent Web Store ID `dpbmpmnibbpimedfmanoabihipdfdfko`, and the 132-character manifest-description release gate.
+
 # VaultCove 0.7.68 R1
 
 - Adds an inline VaultCove **Save this login?** prompt when a submitted website credential is confirmed as not already saved.
