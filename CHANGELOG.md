@@ -1,3 +1,9 @@
+## 0.7.92 R1 — Verification Email Copy/Paste Polish
+
+- Verification codes now render as one continuous six-digit string such as `123456` instead of `123 456`, making direct copy/paste reliable.
+- Adds a premium clipboard-style visual cue beside the code without using email JavaScript or remote executable content.
+- Preserves the 0.7.89 guarded HTTP-login security model and the 0.7.90/0.7.91 branded HTML email, inline logo, plain-text fallback, and licensing compatibility.
+
 ## 0.7.91 R1 — Publisher Permission-Contract Repair
 
 - Fixes the full-source publisher Phase 5 regression that incorrectly expected persistent broad HTTP host access in the DEV package.
