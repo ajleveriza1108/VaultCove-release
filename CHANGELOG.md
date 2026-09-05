@@ -1,3 +1,17 @@
+# VaultCove 0.7.67 R1
+
+- Permanently pins the official Chrome Web Store item ID to `dpbmpmnibbpimedfmanoabihipdfdfko` in the release contract.
+- Adds a release-boundary test that fails if the official Store ID drifts or if an unsupported `manifest.id` field is introduced.
+- Keeps the Web Store package free of a fabricated manifest `key`; the existing Developer Dashboard listing remains the authority for the permanent Store ID.
+- Documents that sideloaded/unpacked builds may use a different local extension ID until the matching Chrome Web Store public key is captured and embedded deliberately.
+- Preserves the permanent 132-character manifest-description gate and all 0.7.66 security/licensing behavior.
+
+# VaultCove 0.7.66 R1
+
+- Added a permanent Chrome Web Store manifest-description release gate.
+- Build/package validation now rejects any manifest description over 132 characters before release ZIP creation.
+- Preserved Web Store update compatibility and the separate Buyer sideload package.
+
 # VaultCove 0.7.65 R1
 
 - Premium account header updates live without page refresh.
