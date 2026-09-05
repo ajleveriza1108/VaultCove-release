@@ -1,12 +1,10 @@
+## 0.7.84 R1
+- Restores the accepted 0.7.82 main VaultCove dashboard/sidebar GUI after the rejected 0.7.83 global visual redesign.
+- Keeps the compact, readable, single-window first-run setup introduced before the dashboard regression.
+- Adds a release-boundary guard preventing startup CSS/markup work from leaking into dashboard/sidebar structure again.
+- No licensing, vault-format, Apps Script, backup-format, sharing, or security-protocol changes.
+
 ## 0.7.82 R1
-
-## 0.7.83 R1
-- Dashboard readability and information hierarchy refresh.
-- Sidebar Premium/Maintenance badges use deterministic columns and never squeeze navigation labels.
-- Summary cards, panel titles, Quick Actions, backup/browser copy, and empty activity state are easier to scan.
-- Free/Premium dashboard backup copy now matches the actual backup entitlement.
-- Website Handler wording reflects live HTTPS detection without redundant Always-On marketing copy.
-
 - Repairs the full-source publisher release identity: BAT, PS1, internal version, build root, tags, package names, and logs now all use 0.7.82.
 - Adds a publisher-package consistency gate so a BAT can never reference a missing or differently-versioned PS1.
 - Retains the 0.7.81 readable startup typography and vertical-scroll-only sidebar behavior.
