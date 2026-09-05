@@ -1,3 +1,10 @@
+# VaultCove 0.7.70 R1
+
+- Fixed detected-login Add so an explicit Add is committed through a fresh serialized vault mutation and verified in the encrypted envelope before success is reported.
+- Website handler state refresh is now read-only and can no longer overwrite a just-added/imported login with a stale vault snapshot.
+- Added encrypted-vault storage change broadcasting so all open website handlers refresh in real time after any vault write; no webpage refresh is required.
+- Preserves the 7-second detected-login prompt, no Add-specific master-password challenge, official Store ID, and 132-character manifest-description release gate.
+
 # VaultCove 0.7.69 R1
 
 - Detected new-login **Add to VaultCove** no longer asks for a separate master-password verification.
