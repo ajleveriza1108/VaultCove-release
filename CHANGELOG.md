@@ -1,3 +1,15 @@
+# VaultCove 0.7.77 R1
+
+- Startup now offers optional Premium serial/email activation and lets the user request a management-device role during first-run setup.
+- Standard Premium remains one shared key for up to 7 devices, with up to 3 active management devices; remaining active devices are regular devices. The private owner-admin entitlement remains unlimited.
+- Management-device role is signed into the lease and enforced by Apps Script. Existing regular devices can be promoted on reactivation while a management slot is available.
+- Removed Retain from Licensed Devices. Management devices can Release, Revoke, Restore, and Delete released device records.
+- Release, Revoke, Restore, and Delete from the app require a fresh local master-password verification plus a fresh email OTP; the server management token is single-use for the action. Direct public release/admin-action endpoints were removed.
+- Released devices immediately vacate a slot. Only released device records can be permanently deleted.
+- Share now includes a premium-style 30-day Sharing History grouped by date with recipient email, credential names, and granted access duration.
+- Premium encrypted .vcvault backup is now a complete owned-data backup: vault categories, folders, Trash, Favorites, TOTP, sharing/recipient/history metadata, activity history, recovery material, and all local settings. Free Forever remains Login-credentials-only backup. Recipient-bound Use Only shared credentials remain non-portable by design.
+- Preserves inline folder creation for Cards, Bank Accounts, Identities, and Secure Notes plus system-wide live propagation for vault/import/settings/license changes.
+
 # VaultCove 0.7.75 R1
 
 - Fixed Licensed Devices discovery when the local AES-GCM-wrapped refresh token/serial cannot be reopened: an already-valid signed lease now authenticates read-only device snapshots.
