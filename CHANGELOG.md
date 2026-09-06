@@ -1,3 +1,10 @@
+## 0.8.5 R1 — Released-ledger action fix + faster License & Devices
+- Fixed the client-side strict request allowlist so `deleteReleasedDevices` can run after a successful management OTP instead of failing with “Unsupported license-service action.”
+- License & Devices now paints immediately from the locally verified signed lease and refreshes the server ledger asynchronously instead of blocking the tab on a remote request.
+- Concurrent ledger refreshes share one in-flight request, and passive polling is reduced from 5 seconds to 15 seconds.
+- Preserves 0.8.4 password-change auto-update + professional email notice, Device Admin promotion/state synchronization, direct Edit in dashboard routing, selective backup, Backup Health, Disaster Recovery, and VCShare.
+- No Apps Script schema or endpoint change is required beyond the already-deployed 0.8.4 `deleteReleasedDevices` handler.
+
 ## 0.8.4 R1 — Password-change detection/UI repair + Device Admin ledger cleanup
 
 - Restores high-confidence password-change detection for real change/reset forms that use matching new-password fields but omit modern autocomplete/label metadata. Ordinary ambiguous login attempts still cannot silently overwrite a saved password.
