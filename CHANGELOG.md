@@ -1,3 +1,14 @@
+## 0.9.2 R1 — Critical activity emails + dashboard/vault refinement
+- Card, Bank Account, and Identity updates now queue an automatic professional security email to the registered Premium license email.
+- Moving a Card, Bank Account, or Identity to Trash now queues a protected-record removal email with category, device, and local date/time metadata only.
+- Exporting passwords through VCShare now queues a password-sharing security email with only the number of credentials and a locally masked recipient hint; login names, websites, usernames, passwords, and VCShare contents are never emailed.
+- Password-change emails remain automatic. The optional Settings toggle now applies only to additional background protected-record notices.
+- Dashboard adds a compact action/status strip for logins, security attention, backup health, and Guardian.
+- Dashboard summary cards are denser and easier to scan without removing any existing information.
+- Vault and Logins add a persistent Sort control (Favorites first, Name A-Z, Recently updated, Oldest updated) and a compact Organize Vault control.
+- Login cards are cleaner: the repeated “Login name / nickname — Not set” bar is removed from browsing cards, Secure Login no longer truncates, and Name/Details/Trash remain directly accessible.
+- Requires the matching 0.9.2 Code.gs deployment because the security-notice transport now accepts protected-record category and VCShare metadata.
+
 ## 0.9.1 R1 — Share navigation + instant Guardian + platform-aware devices
 - Moves the legacy encrypted `.vckey` to TXT utility out of the primary Share tabs into a dedicated compact VCKey Tools utility row so the main sharing navigation remains balanced.
 - Makes VaultCove Guardian render immediately from unlocked local state; Security Ledger verification and same-license Trusted Device Approval requests hydrate asynchronously after first paint.
