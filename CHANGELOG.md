@@ -1,3 +1,9 @@
+## 0.8.6 R1 — Released-history backend compatibility repair
+- Fixed the remaining **Delete all released records** failure when the deployed Apps Script Web App is older than the extension.
+- The Apps Script router now accepts the canonical `deleteReleasedDevices` action plus transitional aliases, and responses expose a non-secret server build identity.
+- The extension now reports a precise backend-update instruction when an older `/exec` deployment returns `Unsupported license action`, rather than implying that the OTP or license failed.
+- No license key, Sheet schema, seven-device entitlement, active Device Admin state, password-change capture, email notice, Backup Health, or vault data behavior is changed.
+
 ## 0.8.5 R1 — Released-ledger action fix + faster License & Devices
 - Fixed the client-side strict request allowlist so `deleteReleasedDevices` can run after a successful management OTP instead of failing with “Unsupported license-service action.”
 - License & Devices now paints immediately from the locally verified signed lease and refreshes the server ledger asynchronously instead of blocking the tab on a remote request.
