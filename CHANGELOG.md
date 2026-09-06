@@ -1,3 +1,21 @@
+# VaultCove 0.7.96 R1
+
+- Adds optional Automatic Disaster Recovery backups while the vault is unlocked; the Master Password is never stored.
+- Disaster Recovery reuses the current encrypted Master Password key wrap and encrypts the recovery email inside the `.vcvault` package.
+- Automatic recovery files are written to `Downloads/VaultCove Disaster Recovery/VaultCove-Disaster-Recovery-Latest.vcvault`; users should sync/copy that folder off-device for true device-loss protection.
+- Restoring a Disaster Recovery backup requires the Master Password that protected the backup plus a fresh six-digit OTP sent to the encrypted recovery email.
+- Manual `.vcvault` backup/restore remains unchanged and continues to use its separate random Backup Key with no online OTP requirement.
+- Free Forever Disaster Recovery protects Login credentials; Premium Disaster Recovery uses the complete supported backup scope and recovery material.
+- Master Password rotation marks Disaster Recovery pending so the next unlocked backup is protected by the new Master Password wrap.
+
+# VaultCove 0.7.95 R1
+
+- Replaces the verification-email Copy code Apps Script `/macros` helper with a static `copy-code.html` page.
+- The email link now carries the six-digit OTP only in the URL fragment (for example `#123456`); fragments are not sent in the HTTP request to the static host.
+- The static page immediately removes the fragment from the visible address bar, attempts clipboard copy, and keeps an explicit Copy code button plus legacy copy fallback.
+- Adds `VC_COPY_HELPER_URL` as an optional HTTPS static-page override; Apps Script `/macros` URLs are explicitly rejected.
+- Keeps the email itself script-free and preserves continuous six-digit OTP formatting.
+
 # VaultCove 0.7.94 R1
 
 - Fixed the publisher post-install regression check to recognize backup snapshot v4 instead of the obsolete v3 marker.

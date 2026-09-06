@@ -1,0 +1,21 @@
+{
+  "product": "VaultCove",
+  "version": "0.7.96",
+  "revision": "R1",
+  "tag": "v0.7.96-r1",
+  "publicKeySha256": "de232e9a6f243d36a73d1525be597dfc776bd0bcd9169aa9800cdac3db241401",
+  "artifacts": [
+    {
+      "name": "VaultCove-0.7.96-R1-FULL-SOURCE-UPDATE-PUBLISH.zip",
+      "sha256": "34d4f99c94521d9408867d532bb645d246d21d66bbd34b6e1808c39e17cab311"
+    },
+    {
+      "name": "VaultCove-0.7.96-R1-DEV.zip",
+      "sha256": "2e8a5f11124cbdc44f5ca7dd095b0279e44c8bcc093770ddaf3d8baf0783f674"
+    },
+    {
+      "name": "VaultCove-0.7.96-R1-STORE-PREFLIGHT.zip",
+      "sha256": "8fe93253738d2c2074c4d2a9e8d7b84984af1982204acf38093399b73a49c54e"
+    }
+  ]
+}
