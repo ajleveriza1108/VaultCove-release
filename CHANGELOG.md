@@ -1,3 +1,18 @@
+# VaultCove 0.7.98 R1
+
+- Fixed the full-source publisher post-install verification crash caused by reading `$vaultHtmlAfter` before initialization under PowerShell StrictMode.
+- Preserves the 0.7.97 visible Login name / nickname controls in Vault, Logins, Details, Grid, List, and the full Login editor.
+- Preserves Automatic Disaster Recovery, manual `.vcvault` restore, VCShare, licensing, and the static email Copy code helper.
+- No Master Password or vault plaintext is added to publisher/release artifacts.
+
+# VaultCove 0.7.97 R1
+
+- Makes **Login name / nickname** visible in both the Vault and Logins browsing views instead of hiding the feature inside the full editor.
+- Every owned login card/list row now exposes **Add nickname / Edit nickname** for direct access.
+- The selected-login Details drawer explicitly shows the nickname state and a direct edit button.
+- Login editor now separates **Website / login title** from **Login name / nickname**, with examples for multiple accounts on the same site/IP.
+- Nickname remains Free Forever + Premium, encrypted with the login record, searchable, and included in manual/Disaster Recovery backups.
+
 # VaultCove 0.7.96 R1
 
 - Adds optional Automatic Disaster Recovery backups while the vault is unlocked; the Master Password is never stored.
