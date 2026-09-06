@@ -1,3 +1,32 @@
+## 0.8.10 R1 — Regular Device Admin cross-platform contract + publisher verifier repair
+
+- Confirms and regression-locks the standard Premium Device Admin model: a promoted Device Admin can detect and manage every device using the same regular license key across supported platforms, while its Device Admin role remains tied only to the promoted device.
+- The shared device ledger remains scoped strictly to the same server-side licenseId; raw license keys are never shared between devices.
+- Fixes the 0.8.9 post-install verifier typo that incorrectly searched `license-service.js` for the `licenseDevicesRefreshInFlight` guard even though that guard correctly lives in `vault.js`.
+- Preserves Main/Owner Admin license-identity propagation, seven-device / three-Device-Admin standard policy, password-change email, released-history cleanup, Backup Health, Disaster Recovery, and VCShare.
+- No Apps Script deployment is required when the matching 0.8.7+ backend is already deployed.
+
+## 0.8.9 R1 — Publisher self-check repair
+
+- Fixes the 0.8.8 publisher self-check that matched its own retired monitoring-marker text and stopped before source preflight completed.
+- The regression guard now inspects the actual post-install verifier block and builds the retired marker from fragments so it cannot self-match.
+- Preserves the 0.8.7/0.8.8 cross-platform Main Admin, same-key device ledger, fast License & Devices rendering, released-history cleanup, password-change email, and backup/security behavior unchanged.
+- No Apps Script deployment is required when the matching 0.8.7+ backend is already deployed.
+
+## 0.8.8 R1 — Publisher verifier repair for fast License & Devices
+
+- Fixes the stale post-install publisher check that still expected the retired pre-0.8.7 automatic-device-monitoring wording.
+- Verifies the current immediate-render + asynchronous same-key cross-platform device-ledger implementation instead.
+- Preserves 0.8.7 Main/Owner Admin cross-platform license-identity authority and same-key device discovery unchanged.
+- No new Apps Script deployment is required when the matching 0.8.7 backend is already deployed.
+
+## 0.8.7 R1 — Cross-platform Main Admin + same-key device discovery
+- Main/Owner Admin authority now follows the owner/admin license identity across supported platforms instead of depending on which device registered it first.
+- Chrome automatically reconciles to Owner Admin when Android or another supported client on the same key already established Main Admin authority.
+- The Licensed Devices ledger detects all devices sharing the same license identity and reports platform coverage without transmitting the raw license key.
+- Device Admin remains device-specific; promoting one regular customer device does not elevate every device on that standard key.
+- Preserves password-change detection/email, fast License & Devices rendering, released-record cleanup, Backup Health, Disaster Recovery, VCShare, and code-only OTP email.
+
 ## 0.8.6 R1 — Released-history backend compatibility repair
 - Fixed the remaining **Delete all released records** failure when the deployed Apps Script Web App is older than the extension.
 - The Apps Script router now accepts the canonical `deleteReleasedDevices` action plus transitional aliases, and responses expose a non-secret server build identity.
