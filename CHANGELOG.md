@@ -1,3 +1,13 @@
+## 0.8.4 R1 — Password-change detection/UI repair + Device Admin ledger cleanup
+
+- Restores high-confidence password-change detection for real change/reset forms that use matching new-password fields but omit modern autocomplete/label metadata. Ordinary ambiguous login attempts still cannot silently overwrite a saved password.
+- Fixes the `Cannot read properties of null (reading 'items')` dashboard race by making active-item rendering null-safe while the decrypted vault is being locked/cleared.
+- **Edit in dashboard** now carries the exact login ID through the popup route and opens that login directly in the editor after the dashboard is ready/unlocked.
+- License & Devices now consults the server device ledger before rendering promotion controls. If the current device is already `Device Admin`, **Make this device admin** is hidden immediately even if an older local lease was stale.
+- Adds **Delete all released records** for authorized Device Admins. One fresh Master Password + registered-email OTP can permanently remove all released device-history rows. The license row/key is untouched and the standard Premium capacity remains up to 7 devices.
+- Individual released-device Delete continues to remove only that released device record and never changes the license entitlement.
+- Preserves automatic password-update toast/email behavior, code-only OTP email, Backup Health, selective `.vcvault`, Disaster Recovery, VCShare, and Owner Admin separation.
+
 ## 0.8.3 R1 — Automatic password update security notice + Device Admin state repair
 
 - High-confidence password-change forms now update the matching owned login immediately without a second VaultCove confirmation. The previous password remains inside encrypted password history (last 10), Backup Health/Disaster Recovery are marked pending, and the page receives a short **Password updated** toast that smoothly fades out.
