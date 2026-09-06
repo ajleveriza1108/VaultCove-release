@@ -1,3 +1,9 @@
+## 0.9.0 R1 — VaultCove Guardian
+- Adds Premium Guardian with Fortress Mode, Protected/Strict/Fortress per-login policies, Security Zones, exact-domain pinning, Blind Credential Mode, Split-Trust TOTP, Trusted Device Approval, Security Cooldown, Security Ledger, password-change receipts, Security Quarantine, breach-date intelligence, Account Takeover Emergency playbooks, Passkey Migration Coach, Backup Confidence, Recovery Drill, and rolling Daily/Weekly/Monthly Disaster Recovery generations.
+- Fundamental encryption, phishing/HTTPS protections, password-change detection/email, login backup, and core safe password management remain Free Forever protections.
+- Trusted Device Approval uses signed same-license device leases and stores only non-secret approval metadata in Apps Script; requesters cannot self-approve.
+- TOTP Codes are active again for Premium; Guardian Split-Trust can require another trusted same-license device before showing selected codes.
+
 ## 0.8.11 R1 — Visible same-key cross-platform verification
 - Added deterministic non-secret License Identity fingerprint derived from the signed server license ID.
 - Every server-returned device row now shows Same key verified.
