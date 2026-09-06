@@ -1,4 +1,11 @@
-## 0.8.10 R1 — Regular Device Admin cross-platform contract + publisher verifier repair
+## 0.8.11 R1 — Visible same-key cross-platform verification
+- Added deterministic non-secret License Identity fingerprint derived from the signed server license ID.
+- Every server-returned device row now shows Same key verified.
+- License & Devices explicitly reports detected Android/iOS devices on the same license ledger.
+- If no mobile device is present, VaultCove says so instead of implying cross-platform discovery succeeded.
+- Main/Owner Admin and regular Device Admin authority rules are unchanged.
+
+## 0.8.11 R1 — Regular Device Admin cross-platform contract + publisher verifier repair
 
 - Confirms and regression-locks the standard Premium Device Admin model: a promoted Device Admin can detect and manage every device using the same regular license key across supported platforms, while its Device Admin role remains tied only to the promoted device.
 - The shared device ledger remains scoped strictly to the same server-side licenseId; raw license keys are never shared between devices.
