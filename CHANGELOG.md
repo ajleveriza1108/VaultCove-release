@@ -1,3 +1,11 @@
+## 0.9.1 R1 — Share navigation + instant Guardian + platform-aware devices
+- Moves the legacy encrypted `.vckey` to TXT utility out of the primary Share tabs into a dedicated compact VCKey Tools utility row so the main sharing navigation remains balanced.
+- Makes VaultCove Guardian render immediately from unlocked local state; Security Ledger verification and same-license Trusted Device Approval requests hydrate asynchronously after first paint.
+- Replaces the generic `VC` badge in Licensed Devices with platform/device icons and normalized labels for Windows, Chrome OS, Linux, macOS, Android Phone, Android Tablet, iPhone, iPad, and safe fallbacks.
+- New Chrome activations publish a normalized desktop platform label so future device-ledger rows are easier to recognize.
+- Removes the visible License Identity fingerprint from License & Devices while preserving server-side same-license grouping, Same key verified evidence, Main Admin cross-platform authority, and device-specific Device Admin rules.
+- No Apps Script schema/action change is required; the matching 0.9.0 Guardian backend remains compatible.
+
 ## 0.9.0 R1 — VaultCove Guardian
 - Adds Premium Guardian with Fortress Mode, Protected/Strict/Fortress per-login policies, Security Zones, exact-domain pinning, Blind Credential Mode, Split-Trust TOTP, Trusted Device Approval, Security Cooldown, Security Ledger, password-change receipts, Security Quarantine, breach-date intelligence, Account Takeover Emergency playbooks, Passkey Migration Coach, Backup Confidence, Recovery Drill, and rolling Daily/Weekly/Monthly Disaster Recovery generations.
 - Fundamental encryption, phishing/HTTPS protections, password-change detection/email, login backup, and core safe password management remain Free Forever protections.
