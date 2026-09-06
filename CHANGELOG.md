@@ -1,3 +1,20 @@
+# VaultCove 0.7.100 R1
+
+- Repairs the full-source publisher bootstrap after 0.7.99 lost its required PowerShell helper block before preflight.
+- Restores Write-Step, Write-Pass, Write-Info, Write-Warn, Throw-Fail, elevation/command checks, SHA-256 helpers, UTF-8 writers, parser checks, rollback-copy helper, and release-public-key reader before any helper-dependent code executes.
+- Adds a bootstrap self-check covering the full critical helper set before PHASE 0, so an incomplete publisher stops before touching the canonical project.
+- Preserves the 0.7.99 selective manual `.vcvault` backup fix: Login credentials are the only required component; Premium optional components remain independently selectable.
+- Preserves visible Login name/nickname controls, Automatic Disaster Recovery, licensing, VCShare, and static email Copy code behavior.
+
+# VaultCove 0.7.99 R1
+
+- Fixed Encrypted `.vcvault` backup selection so Login credentials are the only mandatory manual-backup component.
+- Premium optional components now start unselected and can be checked or unchecked independently: Folders, Cards, Bank accounts, Identities, Secure notes, TOTP codes, Trash, Favorites, and All settings & preferences.
+- Removed the manual-backup runtime rule that forced every Premium component on at export time.
+- Free Forever remains Login-credentials-only backup.
+- Automatic Disaster Recovery keeps its existing Free/Premium scope and is intentionally unaffected by this manual-backup selection fix.
+- Preserves visible Login name/nickname editing, backup snapshot v4, licensing, VCShare, and the static email Copy code helper.
+
 # VaultCove 0.7.98 R1
 
 - Fixed the full-source publisher post-install verification crash caused by reading `$vaultHtmlAfter` before initialization under PowerShell StrictMode.
