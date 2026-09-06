@@ -1,3 +1,21 @@
+# VaultCove Changelog
+
+## 0.8.2 R1 — Retired Copy Helper Cleanup Publisher Fix
+
+- Fixes upgrade from 0.8.0/0.8.1 when the retired root `copy-code.html` file remains in the canonical project.
+- The full-source publisher now explicitly deletes `copy-code.html` before post-install security tests.
+- Preserves Device Admin email promotion, code-only OTP email, Backup Health, selective `.vcvault` backup, Disaster Recovery, nicknames, licensing, and VCShare.
+
+## 0.8.1 R1 — Device Admin email promotion + code-only OTP email
+
+- Standard Premium activations now begin as Regular Devices; the old activation-time Management Device checkbox is removed from both startup and License & Devices.
+- Adds **Make this device admin** for an already activated regular Premium device. Promotion requires fresh Sensitive Access plus a fresh six-digit OTP sent to the license's registered email.
+- Enforces the existing maximum of three Device Admins on a standard seven-device Premium license.
+- Device Admin authority is scoped to the same license's device ledger and never grants access to other licenses or vault data.
+- Keeps the private main owner-admin entitlement separate and unlimited.
+- Rotates the current device refresh token and returns a newly signed lease after successful Device Admin promotion.
+- Removes all email Copy code UI/link behavior, the helper URL functions, and `copy-code.html`. Verification and Disaster Recovery emails now display only selectable six-digit text.
+
 - Test hardening: deterministic Disaster Recovery tamper regression avoids Base64URL padding-bit false negatives.
 # VaultCove 0.8.0 R1
 
