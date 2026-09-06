@@ -1,3 +1,13 @@
+## 0.8.3 R1 — Automatic password update security notice + Device Admin state repair
+
+- High-confidence password-change forms now update the matching owned login immediately without a second VaultCove confirmation. The previous password remains inside encrypted password history (last 10), Backup Health/Disaster Recovery are marked pending, and the page receives a short **Password updated** toast that smoothly fades out.
+- Ordinary/ambiguous login submissions are still never allowed to overwrite a saved password automatically; they remain in the encrypted password-change review path so a typo or failed sign-in cannot silently replace a working credential.
+- Active Premium installations automatically queue a professional password-change security email to the email already registered to the license. It includes only the website hostname, local password-change date/time/time zone, and device label. It never contains the username, old/new password, password history, saved URL path/query, or other vault secrets.
+- The password-change email contains no account-login link. If the recipient did not make the change, it tells them to open the provider's official website/app themselves, change the password again, review recent activity/sessions, and verify recovery email and two-factor authentication.
+- Repairs the Device Admin split-state bug after a successful promotion OTP. The client can now commit a rotated admin session even when the raw local serial cannot be reopened at that exact step, and a signed-lease synchronization endpoint repairs an already-promoted server role without requiring another activation or OTP.
+- **License & Devices** automatically reconciles an already-promoted current device to **Device Admin**, removes the **Make this device admin** action, and refreshes the signed lease.
+- Preserves the main Owner Admin entitlement, code-only OTP email, monthly Backup Health, selective `.vcvault` backup, Disaster Recovery, VCShare, and all existing encryption boundaries.
+
 # VaultCove Changelog
 
 ## 0.8.2 R1 — Retired Copy Helper Cleanup Publisher Fix
