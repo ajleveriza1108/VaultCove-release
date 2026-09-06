@@ -1,3 +1,17 @@
+- Test hardening: deterministic Disaster Recovery tamper regression avoids Base64URL padding-bit false negatives.
+# VaultCove 0.8.0 R1
+
+- Adds persistent monthly manual-backup health. Meaningful encrypted-vault changes mark the manual backup as pending; during the final three calendar days of the month the Dashboard shows a non-dismissible reminder until a newly created `.vcvault` has been locally decrypted and structurally verified successfully.
+- Adds a permanent Dashboard **Backup Health** card showing last verified manual backup, protected changes since backup, and the next month-end reminder date. Automatic Disaster Recovery remains additional protection and does not clear the independent manual-backup reminder.
+- Manual `.vcvault` creation now performs a local decrypt/parse self-test before VaultCove records the backup as verified or clears the Dashboard reminder.
+- Adds multiple exact website URLs per login while preserving strict host/origin validation and the HTTP no-auto-login safety boundary.
+- Exposes encrypted custom login fields (up to 20) with user-selectable masked values.
+- Adds local possible-duplicate login review based on saved host + username. VaultCove never merges or deletes possible duplicates automatically.
+- Adds **Security Skills**, a friendly local checklist for unique passwords, strong passwords, HTTP risk, verified backups, Disaster Recovery, and VaultCove authenticator protection.
+- Shows retained password-history count in Login Details without displaying previous password values.
+- Adds a best-effort clipboard timeout (30 seconds by default, configurable 0-300 seconds). VaultCove does not request broad clipboard-read permission solely for this feature and will not blindly erase a clipboard value it cannot safely compare.
+- Preserves Free Forever, Premium Lifetime, visible login nicknames, selective manual `.vcvault` backup, Automatic Disaster Recovery, VCShare, licensing protocol v3, and the static email Copy code helper.
+
 # VaultCove 0.7.100 R1
 
 - Repairs the full-source publisher bootstrap after 0.7.99 lost its required PowerShell helper block before preflight.
