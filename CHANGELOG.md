@@ -1,3 +1,25 @@
+## 0.9.4 R1 — Resilient License & Devices live monitoring
+- **License & Devices** now renders the newest valid local device-ledger snapshot immediately, then reconciles the authoritative server ledger in the background.
+- Successful live responses are cached locally as a **sanitized display snapshot** scoped to the current verified signed-license identity and installation. The cache excludes raw license serials, refresh tokens, registered email, Master Password data, vault contents, and management credentials.
+- The monitor shows explicit **Live**, **Cached snapshot**, **Syncing devices**, and **Cached - sync unavailable** states plus the last successful sync time.
+- A **Refresh devices** control is available, the open view continues a 15-second live refresh, and VaultCove refreshes again when connectivity returns, the window regains focus, or the page becomes visible.
+- A failed live request no longer wipes a useful cached ledger. Cached rows remain visible but contain no Release/Revoke/Restore/Delete/Device Admin controls.
+- Release, Revoke, Restore, permanent history deletion, Device Admin promotion, and same-computer linking remain server-authoritative and keep their fresh Master Password + registered-email OTP requirements.
+- A signed-lease device-list request that reaches the server but fails no longer triggers a redundant second network request with fallback credentials. Fallback is used only when a local signed-lease proof cannot be built.
+- Cached snapshots expire after seven days, are cleared with local license state, and are invalidated when the verified license identity changes.
+- No licensing schema or device-capacity rule changes are introduced. The matching 0.9.4 `Code.gs` carries the aligned server build identity.
+
+## 0.9.3 R1 — Same-computer browser slots + stronger password wrapping
+
+- Standard Premium now counts **physical-device groups** rather than raw browser-profile installations. Multiple Chrome/Brave/Edge profiles on the same PC/Mac can share one licensed device slot through a short-lived one-time same-computer link code.
+- Same-computer link-code creation requires a freshly unlocked vault/Master Password confirmation in the extension plus a fresh 6-digit code sent to the registered license email. Link codes expire after 10 minutes, are single-use, and are stored server-side only as a keyed hash.
+- No MAC address, OS serial, IMEI, browser fingerprint, or hidden hardware identifier is collected to group browsers. Existing pre-0.9.3 device rows remain independent slots until deliberately linked.
+- Device ledgers continue to show each browser installation separately for audit/release/revoke, while the capacity counter reports physical-device slots and shows when several browser installations share one slot.
+- New vault Master Password wrapping now uses PBKDF2-HMAC-SHA-256 at **1,200,000 iterations**. Existing 600,000-iteration vaults remain readable and are automatically re-wrapped at the stronger current work factor after a successful Master Password unlock.
+- Newly encrypted `.vckey` and VCShare package-password envelopes also use 1,200,000 PBKDF2 iterations while retaining backward compatibility with existing supported files.
+- The five core regression/release gates continue to enforce Manifest V3, no private key in runtime, no dynamic execution APIs, no source maps, and the existing high-risk permission bans.
+- Requires the matching 0.9.3 `Code.gs` deployment for physical-device grouping and same-computer link-code actions.
+
 ## 0.9.2 R1 — Critical activity emails + dashboard/vault refinement
 - Card, Bank Account, and Identity updates now queue an automatic professional security email to the registered Premium license email.
 - Moving a Card, Bank Account, or Identity to Trash now queues a protected-record removal email with category, device, and local date/time metadata only.
