@@ -1,3 +1,11 @@
+## 0.9.5 R1 — Security Engineering Upgrade
+- Adds Origin Trust Engine 2.0 with conservative public/private suffix and tenant-boundary handling, WHATWG URL/IDNA normalization, and phishing-oriented host risk signals.
+- Adds Password Intelligence 2.0 with local cracker-pattern estimation for common/leet terms, keyboard runs, sequences, repeats, years/dates, and account/site context.
+- Adds OWASP ASVS 5.0 control mapping, security-test matrix, dependency/supply-chain policy, privacy data-flow documentation, incident response, compatibility matrix, and repo-local security/release skills.
+- Adds GitHub CodeQL v4, OSV Scanner v2.3.8, CycloneDX 1.6 SBOM generation, deterministic security fuzzing, and Puppeteer 25.10.0 CI-only extension E2E smoke testing.
+- Runtime extension remains zero-npm-dependency and bundles no remote executable code. Existing 0.9.4 licensing/device monitoring, Guardian, backups, VCShare, KDF profile, and encrypted vault compatibility are preserved.
+- Argon2id is intentionally reserved for the next dedicated cryptographic migration release so 0.9.5 does not change persisted Master Password envelopes.
+
 ## 0.9.4 R1 — Resilient License & Devices live monitoring
 - **License & Devices** now renders the newest valid local device-ledger snapshot immediately, then reconciles the authoritative server ledger in the background.
 - Successful live responses are cached locally as a **sanitized display snapshot** scoped to the current verified signed-license identity and installation. The cache excludes raw license serials, refresh tokens, registered email, Master Password data, vault contents, and management credentials.

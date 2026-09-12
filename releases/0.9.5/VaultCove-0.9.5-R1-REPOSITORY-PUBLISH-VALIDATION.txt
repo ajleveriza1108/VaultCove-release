@@ -1,0 +1,34 @@
+VaultCove 0.9.5 R1 - REPOSITORY PUBLISH VALIDATION
+===================================================
+
+[PASS] Source repository published before release-artifact publication
+[PASS] Missing prebuilt D:\Windows Projects\VaultCove-Builds artifacts are not required
+[PASS] Embedded Buyer package SHA-256 matched the previously validated Buyer
+[PASS] Buyer-only README-FIRST.txt preserved outside canonical source
+[PASS] Canonical 63 source-backed runtime files matched embedded Buyer byte-for-byte
+[PASS] Required local Node/security tests executed before release packaging
+[PASS] Full-source updater payload derived from clean Git-tracked source set
+[PASS] Generated updater contains exactly 1 BAT + 1 PS1 and its PS1 passed the real PowerShell 7 parser
+[PASS] Web Store package rebuilt from validated runtime
+[PASS] Web Store file count = 63
+[PASS] Web Store JavaScript count = 46
+[PASS] Web Store Manifest V3
+[PASS] Web Store no mandatory host_permissions
+[PASS] Web Store no manifest content_scripts
+[PASS] Web Store optional_host_permissions = https://*/* only
+[PASS] Existing release signing identity required; no automatic trust-key rotation
+[PASS] No force push
+[PASS] No destructive reset/rebase fallback
+
+ARTIFACT SHA-256
+VaultCove-0.9.5-R1-FULL-SOURCE-UPDATE-BUILD-1BAT-1PS1.zip
+A106A1CBD23942BA058E6ECEB428ABB2BB4BDB4D249B00AFA99DA72FCF69F592
+
+VaultCove-0.9.5-R1-BUYER.zip
+3ED3F2FC25503B2BC0112ABF9FEDF5FC383C5E3CA2C174C1CCC3C03D77F852EB
+
+VaultCove-0.9.5-R1-WEB-STORE.zip
+33F5A496DD44E6E01B642D38B4AE4E27929BD4AE40B6240D0858F0DAE577A102
+
+RESULT
+PASS for repository-sync R2 executable gates completed on this Windows machine.
